@@ -1,0 +1,89 @@
+#previewBig {
+    position: relative;
+    width: 2480px;
+    height: 3508px;
+    border: 40px solid red;
+    display: none;
+}
+
+.container-main {
+    position: relative;
+    height: 100%;
+}
+
+#previewBig .text {
+    position: absolute;
+    width: 2000px;
+    right: 200px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+#previewBig .text-center-red {
+    text-align: center;
+    color: red;
+}
+
+div > img {
+    position: absolute;
+    width: 1650px;
+    height: 1100px;
+    top: 100px;
+    right: 375px;
+    border: 9px solid black;
+}
+
+#title {
+    font-size: 150px;
+    top: 1200px;
+}
+
+#description {
+    font-size: 75px;
+    text-align: center;
+    height: 100px;
+    top: 1400px;
+}
+
+#conditions {
+    font-size: 75px;
+    text-align: justify;
+    height: 200px;
+    top: 1550px;
+}
+
+#description2 {
+    font-size: 75px;
+    text-align: justify;
+    height: 300px;
+    bottom: 1350px;
+}
+
+#behavioral-features {
+    font-size: 75px;
+    text-align: justify;
+    height: 300px;
+    bottom: 1000px;
+}
+
+#div-phonenumber {
+    bottom: 450px;
+}
+
+#phonenumber {
+    width: 1300px;
+    height: 400px;
+    font-size: 130px;
+    border: 15px solid red;
+}
+
+#fee {
+    font-size: 150px;
+    bottom: 200px;
+}
+
+#footer {
+    font-size: 45px;
+    text-align: center;
+    bottom: 100px;
+}

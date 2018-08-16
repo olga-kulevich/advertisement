@@ -1,0 +1,18 @@
+{
+  "name": "home-work-13",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "browser-sync start -s -w"
+  },
+  "author": "Maksim Yakusik",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.4"
+  },
+  "dependencies": {
+    "dom-to-image": "^2.6.0",
+    "dom-to-image-chrome-fix": "^2.6.0",
+    "html2canvas": "^1.0.0-alpha.12",
+    "jspdf": "^1.4.1"
+  }
+}
