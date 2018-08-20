@@ -1,4 +1,4 @@
-#previewBig {
+.previewBig {
     position: relative;
     width: 2480px;
     height: 3508px;
@@ -11,7 +11,7 @@
     height: 100%;
 }
 
-#previewBig .text {
+.previewBig .text {
     position: absolute;
     width: 2000px;
     right: 200px;
@@ -19,12 +19,12 @@
     overflow: hidden;
 }
 
-#previewBig .text-center-red {
+.previewBig .text-center-red {
     text-align: center;
     color: red;
 }
 
-#previewBig  img {
+.previewBig img {
     position: absolute;
     width: 1650px;
     height: 1100px;
@@ -33,57 +33,61 @@
     border: 9px solid black;
 }
 
-#title {
+.title {
+    display: none;
+}
+
+
     font-size: 150px;
     top: 1200px;
 }
 
-#description {
+.description {
     font-size: 75px;
     text-align: center;
     height: 100px;
     top: 1400px;
 }
 
-#conditions {
+.conditions {
     font-size: 75px;
     text-align: justify;
     height: 200px;
     top: 1550px;
 }
 
-#description2 {
+.description2 {
     font-size: 75px;
     text-align: justify;
     height: 300px;
     bottom: 1350px;
 }
 
-#behavioral-features {
+.behavioral-features {
     font-size: 75px;
     text-align: justify;
     height: 300px;
     bottom: 1000px;
 }
 
-#div-phonenumber {
+.div-phonenumber {
     bottom: 450px;
     left: 550px;
 }
 
-#phonenumber {
+.phonenumber {
     width: 1300px;
     height: 400px;
     font-size: 130px;
     border: 15px solid red;
 }
 
-#fee {
+.fee {
     font-size: 150px;
     bottom: 200px;
 }
 
-#footer {
+.footer {
     font-size: 45px;
     text-align: center;
     bottom: 100px;

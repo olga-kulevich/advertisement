@@ -21,7 +21,7 @@ const btnPrew = document.getElementById('preview_btn'),
 function previewFile() {
     var petImage = document.getElementById('pet-image');
     var file = document.getElementById('photo').files[0];
-    var reader  = new FileReader();
+    var reader = new FileReader();
 
     reader.onloadend = function() {
         petImage.src = reader.result;
@@ -35,26 +35,25 @@ function previewFile() {
 }
 
 btnPrew.addEventListener('click', function () {
-   while (preview.firstChild) {
-       preview.removeChild(preview.firstChild);
-   }
+    while (preview.firstChild) {
+        preview.removeChild(preview.firstChild);
+    }
 
-   title.innerHTML = selectTitle.options[selectTitle.selectedIndex].value.toUpperCase();
-   description.innerHTML = areaDescription1.value;
-   conditions.innerHTML = areaConditions.value;
-   description2.innerHTML = areaDescription2.value;
-   behavioralFeatures.innerHTML = areaBehavioralFeatures.value;
-   firstPhonenumber.innerHTML = firstInputPhonenumber.value;
-   secondPhonenumber.innerHTML = secondInputPhonenumber.value;
+    title.innerHTML = selectTitle.options[selectTitle.selectedIndex].value.toUpperCase();
+    description.innerHTML = areaDescription1.value;
+    conditions.innerHTML = areaConditions.value;
+    description2.innerHTML = areaDescription2.value;
+    behavioralFeatures.innerHTML = areaBehavioralFeatures.value;
+    firstPhonenumber.innerHTML = firstInputPhonenumber.value;
+    secondPhonenumber.innerHTML = secondInputPhonenumber.value;
 
-   if (checkbox.checked) {
-       fee.innerHTML = checkbox.value;
-   } else {
-       fee.innerHTML = "";
-   }
+    if (checkbox.checked) {
+        fee.innerHTML = checkbox.value;
+    } else {
+        fee.innerHTML = "";
+    }
 
-// take screenshot and put to div 'preview'
-   $('#previewBig').show(0);
+    $('#previewBig').show(0);
 
     domtoimage.toSvg(previewBig)
         .then(function (dataUrl) {
@@ -74,5 +73,5 @@ function getScreenshot() {
         .then(function (blob) {
             $('#previewBig').hide();
             window.saveAs(blob, 'ad.png');
-    });
+        });
 }

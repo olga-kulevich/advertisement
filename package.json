@@ -1,10 +1,10 @@
 {
-  "name": "home-work-13",
+  "name": "project",
   "version": "1.0.0",
   "scripts": {
     "start": "browser-sync start -s -w"
   },
-  "author": "Maksim Yakusik",
+  "author": "Olga Kulevich",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.24.4"
