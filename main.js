@@ -1,4 +1,5 @@
 const btnPrew = document.getElementById('preview_btn'),
+    saveAd = document.getElementById('save-advertisement'),
     preview = document.getElementById('preview'),
     previewBig = document.getElementById('previewBig'),
     title = document.getElementById('title'),
@@ -20,6 +21,7 @@ const btnPrew = document.getElementById('preview_btn'),
 
 function previewFile() {
     var petImage = document.getElementById('pet-image');
+    var files = document.getElementById('photo').files;
     var file = document.getElementById('photo').files[0];
     var reader = new FileReader();
 
@@ -27,10 +29,14 @@ function previewFile() {
         petImage.src = reader.result;
     };
 
-    if (file) {
+    if (file && document.getElementById('photo').files.length !== 0) {
         reader.readAsDataURL(file);
+        btnPrew.disabled = false;
+        saveAd.classList.remove('disabled');
+
     } else {
-        petImage.src = "";
+        btnPrew.disabled = true;
+        saveAd.classList.add('disabled');
     }
 }
 

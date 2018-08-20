@@ -11,6 +11,11 @@
     height: 100%;
 }
 
+button[disabled] {
+    cursor: none;
+    pointer-events:none;
+}
+
 .previewBig .text {
     position: absolute;
     width: 2000px;
@@ -34,10 +39,6 @@
 }
 
 .title {
-    display: none;
-}
-
-
     font-size: 150px;
     top: 1200px;
 }

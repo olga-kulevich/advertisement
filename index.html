@@ -21,7 +21,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="select-title" class="control-label">Кто пропал</label>
-                            <select required  id="select-title" class="form-control">
+                            <select id="select-title" class="form-control">
                                 <option value="собака">собака</option>
                                 <option value="кот">кот</option>
                                 <option value="кошка">кошка</option>
@@ -74,9 +74,9 @@
                 </div>
 
                 <div class="form-group">
-                    <button id="preview_btn" type="button" class="btn btn-primary btn-block">Preview</button>
+                    <button id="preview_btn" type="button" class="btn btn-primary btn-block" disabled="disabled">Preview</button>
                 </div>
-                <a href="javascript:getScreenshot()">Скачать объявление</a>
+                <a class="btn disabled" href="javascript:getScreenshot()" id="save-advertisement">Скачать объявление</a>
             </div>
 
             <div class="col-sm-6" id="preview">
