@@ -1,7 +1,12 @@
+html {
+    background-color: #ffffff;
+}
+
 .previewBig {
     position: relative;
     width: 2480px;
     height: 3508px;
+    background-color: #ffffff;
     border: 40px solid red;
     display: none;
 }
@@ -35,7 +40,7 @@ button[disabled] {
     height: 1100px;
     top: 100px;
     right: 375px;
-    border: 9px solid black;
+    /*border: 9px solid black;*/
 }
 
 .title {
@@ -72,6 +77,11 @@ button[disabled] {
 }
 
 .div-phonenumber {
+    position: absolute;
+    width: 1300px;
+    right: 200px;
+    font-weight: bold;
+    overflow: hidden;
     bottom: 450px;
     left: 550px;
 }
@@ -92,4 +102,11 @@ button[disabled] {
     font-size: 45px;
     text-align: center;
     bottom: 100px;
+}
+
+@media all and (min-width: 768px) {
+    .container-main .btn{
+        display: inline;
+        width: auto;
+    }
 }

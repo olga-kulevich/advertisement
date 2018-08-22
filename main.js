@@ -1,5 +1,6 @@
 const btnPrew = document.getElementById('preview_btn'),
     saveAd = document.getElementById('save-advertisement'),
+    savePdf = document.getElementById('save-pdf'),
     preview = document.getElementById('preview'),
     previewBig = document.getElementById('previewBig'),
     title = document.getElementById('title'),
@@ -21,7 +22,6 @@ const btnPrew = document.getElementById('preview_btn'),
 
 function previewFile() {
     var petImage = document.getElementById('pet-image');
-    var files = document.getElementById('photo').files;
     var file = document.getElementById('photo').files[0];
     var reader = new FileReader();
 
@@ -33,10 +33,12 @@ function previewFile() {
         reader.readAsDataURL(file);
         btnPrew.disabled = false;
         saveAd.classList.remove('disabled');
+        savePdf.classList.remove('disabled');
 
     } else {
         btnPrew.disabled = true;
         saveAd.classList.add('disabled');
+        savePdf.classList.add('disabled');
     }
 }
 
@@ -81,3 +83,16 @@ function getScreenshot() {
             window.saveAs(blob, 'ad.png');
         });
 }
+
+function getPdf() {
+    $('#previewBig').show(0);
+
+    domtoimage.toJpeg(previewBig)
+        .then(function (dataUrl) {
+            $('#previewBig').hide();
+            var pdf = new jsPDF('p', 'mm', 'a4');
+            pdf.addImage(dataUrl, 'jpeg', 5, 7.5, 199.5, 282.15);
+
+            pdf.save('ad.pdf');
+        });
+    }
