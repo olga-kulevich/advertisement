@@ -42,11 +42,7 @@ function previewFile() {
     }
 }
 
-//function createPreview() {}
-
-//btnPrew.addEventListener('click', createPreview);
-
-btnPrew.addEventListener('click', function () {
+function createPreview() {
     while (preview.firstChild) {
         preview.removeChild(preview.firstChild);
     }
@@ -75,8 +71,12 @@ btnPrew.addEventListener('click', function () {
             img.classList.add("img-fluid", "img-responsive");
 
             preview.appendChild(img);
-        })
-});
+        });
+}
+
+btnPrew.addEventListener('click', createPreview);
+
+//btnPrew.addEventListener('click', function () {});
 
 function getScreenshot() {
     $('#previewBig').show(0);
