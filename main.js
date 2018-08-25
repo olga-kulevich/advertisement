@@ -6,11 +6,11 @@ const btnPrew = document.getElementById('preview_btn'),
     title = document.getElementById('title'),
     selectTitle = document.getElementById('select-title'),
     description = document.getElementById('description'),
-    areaDescription1 = document.getElementById('area-description1'),
+    areaMainChar = document.getElementById('area-main-characteristics'),
     conditions = document.getElementById('conditions'),
     areaConditions = document.getElementById('area-conditions'),
     description2 = document.getElementById('description2'),
-    areaDescription2 = document.getElementById('area-description2'),
+    areaDescriptAnimal = document.getElementById('area-description-animal'),
     behavioralFeatures = document.getElementById('behavioral-features'),
     areaBehavioralFeatures = document.getElementById('area-behavioral-features'),
     firstPhonenumber = document.getElementById('first-phonenumber'),
@@ -42,15 +42,19 @@ function previewFile() {
     }
 }
 
+//function createPreview() {}
+
+//btnPrew.addEventListener('click', createPreview);
+
 btnPrew.addEventListener('click', function () {
     while (preview.firstChild) {
         preview.removeChild(preview.firstChild);
     }
 
     title.innerHTML = selectTitle.options[selectTitle.selectedIndex].value.toUpperCase();
-    description.innerHTML = areaDescription1.value;
+    description.innerHTML = areaMainChar.value;
     conditions.innerHTML = areaConditions.value;
-    description2.innerHTML = areaDescription2.value;
+    description2.innerHTML = areaDescriptAnimal.value;
     behavioralFeatures.innerHTML = areaBehavioralFeatures.value;
     firstPhonenumber.innerHTML = firstInputPhonenumber.value;
     secondPhonenumber.innerHTML = secondInputPhonenumber.value;
@@ -92,7 +96,14 @@ function getPdf() {
             $('#previewBig').hide();
             var pdf = new jsPDF('p', 'mm', 'a4');
             pdf.addImage(dataUrl, 'jpeg', 5, 7.5, 199.5, 282.15);
+            //pdf.addFont('ArialMS', 'Arial', 'normal');
+            //pdf.setFont("Arial");
+            pdf.setFontType("normal");
+            pdf.setFontSize(10);
+            pdf.text(85, 295, '@propalasobaka.press');
 
             pdf.save('ad.pdf');
         });
-    }
+};
+
+//document.addEventListener('DOMContentLoaded', createPreview);

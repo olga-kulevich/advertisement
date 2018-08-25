@@ -2,129 +2,160 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="style.css" media="all">
-    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container-fluid container-main">
-        <div class="row">
-            <div class="col-sm-6" id="content">
 
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="photo" class="control-label">Фото</label>
-                            <input type="file" onchange="previewFile()" id="photo" class="form-control-file">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="select-title" class="control-label">Кто пропал</label>
-                            <select id="select-title" class="form-control">
-                                <option value="собака">собака</option>
-                                <option value="кот">кот</option>
-                                <option value="кошка">кошка</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+<nav class="navbar navbar-static-top ">
+    <div class="container">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a class="navbar-link" href="#">Главная</a></li>
+            <li><a class="navbar-link" href="#">Создать объявление</a></li>
+            <li><a class="navbar-link" href="#">О проекте</a></li>
+            <li><a class="navbar-link" href="#">Написать нам</a></li>
+        </ul>
+    </div>
+</nav>
 
-                <div class="form-group">
-                    <label class="control-label" for="area-description1">Описание</label>
-                    <textarea class="form-control" id="area-description1" placeholder=""></textarea>
-                </div>
+<div class="container container-main">
+    <div class="row">
+        <div class="col-lg-6" id="content">
 
-                <div class="form-group">
-                    <label class="control-label" for="area-conditions">Обстоятельства</label>
-                    <textarea class="form-control" id="area-conditions" placeholder=""></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label" for="area-description2">Описание</label>
-                    <textarea class="form-control" id="area-description2" placeholder=""></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label" for="area-behavioral-features">Особенности поведения</label>
-                    <textarea class="form-control" id="area-behavioral-features" placeholder=""></textarea>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="form-group">
-                            <label for="first-input-phonenumber" class="control-label">Тел.номер 1</label>
-                            <input required class="form-control" id="first-input-phonenumber"
-                                   placeholder="" value="" type="text" maxlength="15">
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="form-group">
-                            <label for="second-input-phonenumber" class="control-label">Тел.номер 2</label>
-                            <input required class="form-control" id="second-input-phonenumber"
-                                   placeholder="" type="text" maxlength="15">
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Вознаграждение!">
-                            <label class="form-check-label" for="inlineCheckbox1">Вознаграждение</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <button id="preview_btn" type="button" class="btn btn-primary btn-block" disabled="disabled">Preview</button>
-                </div>
-
-                <a class="btn disabled" href="javascript:getScreenshot()" id="save-advertisement">Скачать объявление</a>
-                <a class="btn disabled" href="javascript:getPdf()" id="save-pdf">Скачать PDF</a>
+            <div class="form-group">
+                <label for="photo" class="control-label">Фото</label>
+                <input type="file" onchange="previewFile()" id="photo" class="form-control-file">
             </div>
 
-            <div class="col-sm-6" id="preview"></div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="select-title" class="control-label">кто</label>
+                        <select id="select-title" class="form-control">
+                            <option value="пропала">пропала</option>
+                            <option value="пропал">пропал</option>
+                            <option value="пропали">пропали</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <input type="text" id="animal" placeholder="собака, кот, черепаха" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="area-main-characteristics">основные характеристики:</label>
+                <textarea class="form-control" id="area-main-characteristics" placeholder="порода, возраст, пол"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="area-conditions">обстоятельства пропажи:</label>
+                <textarea class="form-control" id="area-conditions" placeholder="дата, время суток, место"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="area-description-animal">описание животного:</label>
+                <textarea class="form-control" id="area-description-animal" placeholder="опишите размер, цвет, был ли ошейник, адресник, поводок, особенности внешности, отличительные черты"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="area-behavioral-features">особенности поведения:</label>
+                <textarea class="form-control" id="area-behavioral-features" placeholder="укажите, как себя ведет собака с людьми, откликается ли на имя, может ли проявить агрессию, убежать от испуга, стоит ли ее ловить или лучше не подходить и позвонить хозяину"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="first-input-phonenumber" class="control-label">телефоны:</label>
+                <input required class="form-control" id="first-input-phonenumber" placeholder="укажите телефон хозяина" value="" type="text" maxlength="15">
+            </div>
+
+            <div class="form-group">
+                <!--<label for="second-input-phonenumber" class="control-label">Тел.номер 2</label>-->
+                <input required class="form-control" id="second-input-phonenumber" placeholder="пожалуйста, укажите доп.телефон" type="text" maxlength="15">
+            </div>
+
+            <div class="form-check form-check-inline">
+                <label class="control-label">вознаграждение:</label>
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Вознаграждение">
+                <label class="form-check-label" for="inlineCheckbox1">обещание вознаграждения увеличивает шанс объявления быть замеченным</label>
+            </div>
+
+            <div class="form-group">
+                <input required class="form-control" id="second-input-phonenumber" placeholder="при желании укажите сумму вознаграждения" type="text" maxlength="15">
+            </div>
+
+            <div class="form-group">
+                <button id="preview_btn" type="button" class="btn btn-primary btn-block" disabled="disabled">Preview</button>
+            </div>
+
+            <a class="btn disabled" href="javascript:getScreenshot()" id="save-advertisement">Скачать объявление</a>
+            <a class="btn disabled" href="javascript:getPdf()" id="save-pdf">Скачать PDF</a>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="col-lg-12" id="preview"></div>
+            <div class="col-lg-12" style="background: lightslategray; height: 200px; ">hghgfghfhgfhgfghfgh</div>
+        </div>
+    </div>
+</div>
+
+<div id="previewBig" class ="previewBig">
+    <img id="pet-image" alt="img"/>
+
+    <div id="title" class="title text text-center-red">
+    </div>
+
+    <div id="description" class="description text">
+    </div>
+
+    <div id="conditions" class="conditions text">
+    </div>
+
+    <div id="description2" class="description2 text">
+    </div>
+
+    <div id="behavioral-features" class="behavioral-features text">
+    </div>
+
+    <div id="div-phonenumber" class="div-phonenumber">
+        <div id="phonenumber" class="phonenumber text-center-red">
+            <div id="first-phonenumber"></div>
+            <div id="second-phonenumber"></div>
         </div>
     </div>
 
-    <div id="previewBig" class ="previewBig">
-        <img id="pet-image" alt="img"/>
+    <div id="fee" class="fee text text-center-red"></div>
 
-        <div id="title" class="title text text-center-red">
-        </div>
-
-        <div id="description" class="description text">
-        </div>
-
-        <div id="conditions" class="conditions text">
-        </div>
-
-        <div id="description2" class="description2 text">
-        </div>
-
-        <div id="behavioral-features" class="behavioral-features text">
-        </div>
-
-        <div id="div-phonenumber" class="div-phonenumber">
-            <div id="phonenumber" class="phonenumber text-center-red">
-                <div id="first-phonenumber"></div>
-                <div id="second-phonenumber"></div>
-            </div>
-        </div>
-
-        <div id="fee" class="fee text text-center-red"></div>
-
-        <div id="footer" class="footer text">
-            Пожалуйста, сфотографируйте это объявление, чтобы не потерять номер телефона.
-        </div>
+    <div id="footer" class="footer text">
+        Пожалуйста, сфотографируйте это объявление, чтобы не потерять номер телефона.
     </div>
+</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
-    <script src="https://cdn.rawgit.com/MrRio/jsPDF/master/libs/png_support/png.js"></script>
-    <script src="https://cdn.rawgit.com/MrRio/jsPDF/master/plugins/addimage.js"></script>
+<footer class="footerr">
+    <div class="container">
+        <p class="text-muted">@propalasobaka.press</p>
+    </div>
+</footer>
 
-    <script type="text/javascript" src="\node_modules\dom-to-image-chrome-fix\dist\dom-to-image.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="https://cdn.rawgit.com/eligrey/FileSaver.js/5ed507ef8aa53d8ecfea96d96bc7214cd2476fd2/FileSaver.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+<script src="https://cdn.rawgit.com/MrRio/jsPDF/master/libs/png_support/png.js"></script>
+<script src="https://cdn.rawgit.com/MrRio/jsPDF/master/plugins/addimage.js"></script>
+
+<script type="text/javascript" src="\node_modules\dom-to-image-chrome-fix\dist\dom-to-image.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/eligrey/FileSaver.js/5ed507ef8aa53d8ecfea96d96bc7214cd2476fd2/FileSaver.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
