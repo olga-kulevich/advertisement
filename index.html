@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="style.css" media="all">
+
+    <script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
 </head>
 <body>
 
@@ -123,9 +125,18 @@
                         </div>
 
                         <div class="col-lg-6 social">
-                            <a class="" href="#"><img src="./img/fb.png" class=""></a>
+                            <a href="#"><img src="./img/fb.png"></a>
                             <a class="" href="#"><img src="./img/inst.png"></a>
-                            <a class="" href="#"><img src="./img/vk.png"></a>
+                            <a class="" href="javascript:shareVk()">
+                                <script type="text/javascript">
+                                document.write(VK.Share.button({
+                                url: 'http://propalasobaka.press',
+                                title: 'Заголовок страницы',
+                                image: 'https://img1.goodfon.ru/wallpaper/big/a/69/kartinka-3d-dikaya-koshka.jpg',
+                                noparse: true
+                                }, {type: 'custom', text: '<img src="./img/vk.png">'}));
+                                </script>
+                            </a>
                         </div>
                     </div>
                 </div>
