@@ -1,6 +1,4 @@
 const btnPrew = document.getElementById('preview_btn'),
-    saveAd = document.getElementById('save-advertisement'),
-    savePdf = document.getElementById('save-pdf'),
     preview = document.getElementById('preview'),
     previewBig = document.getElementById('previewBig'),
     title = document.getElementById('title'),
@@ -26,8 +24,6 @@ function previewFile() {
     var petImage = document.getElementById('pet-image');
     var file = document.getElementById('photo').files[0];
     var reader = new FileReader();
-
-
 
     if (file && document.getElementById('photo').files.length !== 0) {
         reader.onloadend = function() {
@@ -92,8 +88,6 @@ function getPdf() {
             $('#previewBig').hide();
             var pdf = new jsPDF('p', 'mm', 'a4');
             pdf.addImage(dataUrl, 'jpeg', 5, 7.5, 199.5, 282.15);
-            //pdf.addFont('ArialMS', 'Arial', 'normal');
-            //pdf.setFont("Arial");
             pdf.setFontType("normal");
             pdf.setFontSize(10);
             pdf.text(85, 295, '@propalasobaka.press');

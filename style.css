@@ -15,25 +15,18 @@ html {
     display: none;
 }
 
-.container-ad {
-    position: relative;
-    height: 100%;
-    display: none;
-}
-
 .container-main {
     position: relative;
     height: 100%;
     display: none;
 }
 
-.container-about {
+.container-ad {
     position: relative;
     height: 100%;
-    display: none;
 }
 
-.container-feedback {
+.container-about {
     position: relative;
     height: 100%;
     display: none;
@@ -146,7 +139,7 @@ button[disabled] {
 .nav>li>a {
     color: black;
     font-size: 16px;
-    padding: 10px 50px;
+    margin: 0px 80px;
 }
 
 .text-muted {
