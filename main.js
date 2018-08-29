@@ -1,6 +1,7 @@
 const btnPrew = document.getElementById('preview_btn'),
     preview = document.getElementById('preview'),
     previewBig = document.getElementById('previewBig'),
+    photo = document.getElementById('photo'),
     title = document.getElementById('title'),
     selectTitle = document.getElementById('select-title'),
     selectAnimal = document.getElementById('animal'),
@@ -30,11 +31,13 @@ function previewFile() {
             petImage.src = reader.result;
         };
         reader.readAsDataURL(file);
-        btnPrew.disabled = false;
     }
 }
 
 function createPreview() {
+
+    previewFile();
+
     while (preview.firstChild) {
         preview.removeChild(preview.firstChild);
     }
@@ -65,10 +68,6 @@ function createPreview() {
             preview.appendChild(img);
         });
 }
-
-btnPrew.addEventListener('click', createPreview);
-
-//btnPrew.addEventListener('click', function () {});
 
 function getScreenshot() {
     $('#previewBig').show(0);
@@ -113,5 +112,33 @@ for (var i = 0; i < listItems.length; i++) {
         document.getElementById('container-' + containerId).style.display = "block";
     });
 }
+
+function debounce(payloadFunction, delayMs) {
+    var timerId;
+
+    return function () {
+        var params = arguments;
+
+        clearTimeout(timerId);
+
+        timerId = setTimeout(function () {
+            payloadFunction.apply(null, params);
+        }, delayMs);
+    };
+};
+
+const delayProcess = debounce(createPreview, 1000);
+
+photo.addEventListener('change', delayProcess);
+selectTitle.addEventListener('change', delayProcess);
+selectAnimal.addEventListener('input', delayProcess);
+areaMainChar.addEventListener('input', delayProcess);
+areaConditions.addEventListener('input', delayProcess);
+areaDescriptAnimal.addEventListener('input', delayProcess);
+areaBehavioralFeatures.addEventListener('input', delayProcess);
+firstInputPhonenumber.addEventListener('input', delayProcess);
+secondInputPhonenumber.addEventListener('input', delayProcess);
+checkbox.addEventListener('change', delayProcess);
+sumFee.addEventListener('input', delayProcess);
 
 document.addEventListener('DOMContentLoaded', createPreview);
