@@ -18,7 +18,6 @@ html {
 .container-main {
     position: relative;
     height: 100%;
-    display: none;
 }
 
 .container-ad {
@@ -29,7 +28,6 @@ html {
 .container-about {
     position: relative;
     height: 100%;
-    display: none;
 }
 
 button[disabled] {
@@ -209,6 +207,7 @@ menu.navbar-brand>img {
 }
 
 .navbar .navbar-right > li > a:hover,
-.navbar .navbar-right > li > a:focus {
+/*.navbar .navbar-right > li > a:focus,*/
+.navbar .navbar-right > li > a.active {
     background: #51fff1;
 }
