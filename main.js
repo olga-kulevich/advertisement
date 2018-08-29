@@ -5,6 +5,7 @@ const btnPrew = document.getElementById('preview_btn'),
     previewBig = document.getElementById('previewBig'),
     title = document.getElementById('title'),
     selectTitle = document.getElementById('select-title'),
+    selectAnimal = document.getElementById('animal'),
     description = document.getElementById('description'),
     areaMainChar = document.getElementById('area-main-characteristics'),
     conditions = document.getElementById('conditions'),
@@ -18,27 +19,22 @@ const btnPrew = document.getElementById('preview_btn'),
     secondPhonenumber = document.getElementById('second-phonenumber'),
     secondInputPhonenumber = document.getElementById('second-input-phonenumber'),
     checkbox = document.getElementById('inlineCheckbox1'),
-    fee = document.getElementById('fee');
+    fee = document.getElementById('fee'),
+    sumFee = document.getElementById('sum-fee');
 
 function previewFile() {
     var petImage = document.getElementById('pet-image');
     var file = document.getElementById('photo').files[0];
     var reader = new FileReader();
 
-    reader.onloadend = function() {
-        petImage.src = reader.result;
-    };
+
 
     if (file && document.getElementById('photo').files.length !== 0) {
+        reader.onloadend = function() {
+            petImage.src = reader.result;
+        };
         reader.readAsDataURL(file);
         btnPrew.disabled = false;
-        saveAd.classList.remove('disabled');
-        savePdf.classList.remove('disabled');
-
-    } else {
-        btnPrew.disabled = true;
-        saveAd.classList.add('disabled');
-        savePdf.classList.add('disabled');
     }
 }
 
@@ -47,7 +43,7 @@ function createPreview() {
         preview.removeChild(preview.firstChild);
     }
 
-    title.innerHTML = selectTitle.options[selectTitle.selectedIndex].value.toUpperCase();
+    title.innerHTML = selectTitle.options[selectTitle.selectedIndex].value.toUpperCase() + ' ' + selectAnimal.value.toUpperCase();
     description.innerHTML = areaMainChar.value;
     conditions.innerHTML = areaConditions.value;
     description2.innerHTML = areaDescriptAnimal.value;
@@ -56,7 +52,7 @@ function createPreview() {
     secondPhonenumber.innerHTML = secondInputPhonenumber.value;
 
     if (checkbox.checked) {
-        fee.innerHTML = checkbox.value;
+        fee.innerHTML = checkbox.value + ' ' + sumFee.value + '!';
     } else {
         fee.innerHTML = "";
     }
@@ -106,4 +102,4 @@ function getPdf() {
         });
 };
 
-//document.addEventListener('DOMContentLoaded', createPreview);
+document.addEventListener('DOMContentLoaded', createPreview);

@@ -7,37 +7,50 @@
     <title></title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="style.css" media="all">
 </head>
 <body>
 
-<nav class="navbar navbar-static-top ">
+<div class="container">
+<nav class="navbar navbar-static-top">
     <div class="container">
-        <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a class="navbar-link" href="#">Главная</a></li>
-            <li><a class="navbar-link" href="#">Создать объявление</a></li>
-            <li><a class="navbar-link" href="#">О проекте</a></li>
-            <li><a class="navbar-link" href="#">Написать нам</a></li>
-        </ul>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+                <span class="sr-only">open navigation</span>
+                <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </button>
+                <a class="navbar-brand" href="#">
+                    <img alt="logo" src="./img/logo.png" class="img-fluid img-responsive">
+                </a>
+        </div>
+        <div id="menu" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="navbar-link" href="#">Главная</a></li>
+                <li class="active"><a class="navbar-link" href="#">Создать объявление</a></li>
+                <li><a class="navbar-link" href="#">О проекте</a></li>
+                <li><a class="navbar-link" href="#">Написать нам</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
+</div>
 
-<div class="container container-main">
+<div class="container container-ad">
     <div class="row">
         <div class="col-lg-6" id="content">
 
             <div class="form-group">
-                <label for="photo" class="control-label">Фото</label>
-                <input type="file" onchange="previewFile()" id="photo" class="form-control-file">
+                <label for="photo" class="control-label">фото:</label>
+                <input type="file" accept="image/jpeg,image/png,image/*" onchange="previewFile()" id="photo" class="form-control-file">
             </div>
 
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label for="select-title" class="control-label">кто</label>
+                        <label for="select-title" class="control-label">кто:</label>
                         <select id="select-title" class="form-control">
                             <option value="пропала">пропала</option>
                             <option value="пропал">пропал</option>
@@ -47,6 +60,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
+                        <label for="animal" class="control-label">&nbsp;</label>
                         <input type="text" id="animal" placeholder="собака, кот, черепаха" class="form-control">
                     </div>
                 </div>
@@ -78,37 +92,114 @@
             </div>
 
             <div class="form-group">
-                <!--<label for="second-input-phonenumber" class="control-label">Тел.номер 2</label>-->
                 <input required class="form-control" id="second-input-phonenumber" placeholder="пожалуйста, укажите доп.телефон" type="text" maxlength="15">
             </div>
 
-            <div class="form-check form-check-inline">
-                <label class="control-label">вознаграждение:</label>
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Вознаграждение">
-                <label class="form-check-label" for="inlineCheckbox1">обещание вознаграждения увеличивает шанс объявления быть замеченным</label>
+            <div class="form-check form-group">
+                <label style="display: block;" class="control-label">вознаграждение:</label>
+                <input style="height: 25px; width: 25px" class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="Вознаграждение">
+                <label style="width:370px;" class="form-check-label checkbox-inline" for="inlineCheckbox1">
+                    обещание вознаграждения увеличивает шанс объявления быть замеченным
+                </label>
             </div>
 
             <div class="form-group">
-                <input required class="form-control" id="second-input-phonenumber" placeholder="при желании укажите сумму вознаграждения" type="text" maxlength="15">
+                <input required class="form-control" id="sum-fee" placeholder="при желании укажите сумму вознаграждения" type="text" maxlength="15">
             </div>
 
             <div class="form-group">
-                <button id="preview_btn" type="button" class="btn btn-primary btn-block" disabled="disabled">Preview</button>
+                <a style="background-color: yellow" id="preview_btn" class="btn">Preview</a>
             </div>
 
-            <a class="btn disabled" href="javascript:getScreenshot()" id="save-advertisement">Скачать объявление</a>
-            <a class="btn disabled" href="javascript:getPdf()" id="save-pdf">Скачать PDF</a>
+            <a style="background-color: yellow" class="btn" href="javascript:getScreenshot()" id="save-advertisement">Скачать объявление</a>
         </div>
 
         <div class="col-lg-6">
-            <div class="col-lg-12" id="preview"></div>
-            <div class="col-lg-12" style="background: lightslategray; height: 200px; ">hghgfghfhgfhgfghfgh</div>
+            <div class="row">
+                <div class="col-lg-12"><label class="control-label">предпросмотр:</label></div>
+                <div class="col-lg-12 form-group" id="preview"></div>
+                <div class="col-lg-12 form-group">
+                    <div class="col-lg-12" id="social" style="padding: 20px 50px; text-align:center;background-color: #e1e1e1;">
+                        <span>распечатайте объявление на цветном принтере, поделитесь объявлением в соцсетях:</span>
+                    </div>
+                    <div class="col-lg-12 form-group" style="padding-bottom: 20px; background-color: #e1e1e1;">
+                        <div class="col-lg-6">
+                            <a class="btn" href="javascript:getPdf()" id="save-pdf">скачать версию для печати</a>
+                        </div>
+
+                        <div class="col-lg-6 social">
+                            <a class="" href="#"><img src="./img/fb.png" class=""></a>
+                            <a class="" href="#"><img src="./img/inst.png"></a>
+                            <a class="" href="#"><img src="./img/vk.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
+<div class="container container-main">
+    <div class="row">
+        <div class="col-lg-6" id="content">
+            <p class="text-lg-left"> что делать, если вы потеряли собаку:</p>
+            <p class="text-lg-left"> 1. убедитесь, что собака не прибежала к месту, где вы живете, зовите ее, обойдите ближайшие районы, опросите гуляющих собачников.</p>
+            <p class="text-lg-left"> 2. позвоните друзьям, семье, попросите помочь в поисках. Сообщите куратору или заводчику собаки о произошедшем.</p>
+            <p class="text-lg-left"> 3. Создайте и распечатайте объявления, по возможности распечатайте на цветном принтере, чтобы оно было заметным.</p>
+            <p class="text-lg-left"> 4. если вы живете в городе, где выпадают осадки - расклеивайте объявления в файлах, прорезью вниз.</p>
+            <p class="text-lg-left"> 5. печатайте несколько объявлений на одном листе, чтобы раздавать небольшие листовки людям (собачникам, администратору в ветклинике, продавцу в магазине, дворнику, охраннику поликлинники и т.д.)</p>
+            <p class="text-lg-left"> 6. попросите тех, кто не может помочь на месте, разместить объявления на сайтах и в группах по поиску животных. Используйте любые группы местности, где утеряно животное, например группу "Подслушано в Бутово", если собака потерялась в этом районе. Используйте породные группы, если собака породистая.</p>
+            <p class="text-lg-left"> 7. не думайте, что собака не может далеко убежать, потому что она боится, старая или маленькая. Может, не переставайте охватывать все большие территории.</p>
+        </div>
+
+        <div class="col-lg-6">
+            <p class="text-lg-left"> что делать, когда собаку нашли:</p>
+            <p class="text-lg-left"> 1. купите ей адресник (если его не было) и никогда больше не снимайте. Он должен быть на любимом звере 24/7.</p>
+            <p class="text-lg-left"> 2. снимите объявления, расскажите в учреждениях, где оставляли листовки, что собака нашлась.</p>
+            <p class="text-lg-left"> 3. отметьте в интернете, что собака дома, или удалите объявления о поиске, чтобы не вводить людей в заблуждение.</p>
+            <p class="text-lg-left"> 4. проанализируйте ситуацию и сделайте правильные выводы. Возможно, с собакой нужно походить на занятия, возможно стоит не спускать ее с поводка, а может это просто была нелепая ошибка, от которой никто не застрахован. Берегите вашего друга!</p>
+        </div>
+    </div>
+</div>
+
+<div class="container container-about">
+    <div class="row">
+        <div class="col-lg-6" id="content">здесь будет Женин текст</div>
+
+        <div class="col-lg-6">здесь будет Женин текст</div>
+    </div>
+</div>
+
+<div class="container container-feedback">
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-4" id="content">
+
+            <div class="form-group">
+                <label for="feedback-name" class="control-label">как к вам обращаться:</label>
+                <input type="text" id="feedback-name" class="form-control" placeholder="имя">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="feedback-mail">как с вами связаться:</label>
+                <input type="mail" id="feedback-mail" class="form-control" placeholder="e-mail">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="feedback-message">текст сообщения:</label>
+                <textarea style="height: 200px" class="form-control" id="feedback-message" placeholder=""></textarea>
+            </div>
+
+            <div class="form-group">
+                <button style="background-color: transparent;" type="submit" class="btn">отправить</button>
+            </div>
+        </div>
+
+        <div class="col-lg-6"></div>
+    </div>
+</div>
+
 <div id="previewBig" class ="previewBig">
-    <img id="pet-image" alt="img"/>
+    <img id="pet-image" alt="img" src="./img/bg-white.png"/>
 
     <div id="title" class="title text text-center-red">
     </div>
