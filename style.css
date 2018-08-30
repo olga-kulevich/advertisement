@@ -1,5 +1,7 @@
-html {
+html body{
+    position: relative;
     background-color: #ffffff;
+    min-height: 100%;
 }
 
 .container-main p {
@@ -12,7 +14,6 @@ html {
     height: 3508px;
     background-color: #ffffff;
     border: 40px solid red;
-    display: none;
 }
 
 .container-main {
@@ -120,6 +121,7 @@ button[disabled] {
 }
 
 .footer {
+    position: absolute;
     font-size: 45px;
     text-align: center;
     bottom: 100px;
@@ -207,7 +209,7 @@ menu.navbar-brand>img {
 }
 
 .navbar .navbar-right > li > a:hover,
-/*.navbar .navbar-right > li > a:focus,*/
+.navbar .navbar-right > li > a:focus,
 .navbar .navbar-right > li > a.active {
     background: #51fff1;
 }

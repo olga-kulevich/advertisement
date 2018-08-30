@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="style.css" media="all">
-
-    <script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
 </head>
 <body>
 
@@ -30,9 +28,9 @@
         </div>
         <div id="menu" class="navbar-collapse collapse">
             <ul id="list-menu" class="nav navbar-nav navbar-right">
-                <li><a id="main" class="navbar-link active" href="#">Главная</a></li>
-                <li><a id="adv" class="navbar-link" href="#">Создать объявление</a></li>
-                <li><a id="about"class="navbar-link" href="#">О проекте</a></li>
+                <li><a id="main" class="navbar-link active" href="#main">Главная</a></li>
+                <li><a id="adv" class="navbar-link" href="#advertisement">Создать объявление</a></li>
+                <li><a id="about"class="navbar-link" href="#about">О проекте</a></li>
             </ul>
         </div>
     </div>
@@ -127,16 +125,7 @@
                         <div class="col-lg-6 social">
                             <a href="#"><img src="./img/fb.png"></a>
                             <a class="" href="#"><img src="./img/inst.png"></a>
-                            <a class="" href="javascript:shareVk()">
-                                <script type="text/javascript">
-                                document.write(VK.Share.button({
-                                url: 'http://propalasobaka.press',
-                                title: 'Заголовок страницы',
-                                image: 'https://img1.goodfon.ru/wallpaper/big/a/69/kartinka-3d-dikaya-koshka.jpg',
-                                noparse: true
-                                }, {type: 'custom', text: '<img src="./img/vk.png">'}));
-                                </script>
-                            </a>
+                            <a class="" href="#"><img src="./img/vk.png"></a>
                         </div>
                     </div>
                 </div>
@@ -176,35 +165,37 @@
     </div>
 </div>
 
-<div id="previewBig" class ="previewBig">
-    <img id="pet-image" alt="img" src="./img/bg-white.png"/>
+<div style="height: 0px; overflow: hidden;">
+    <div id="previewBig" class ="previewBig">
+        <img id="pet-image" alt="img" src="./img/bg-white.png"/>
 
-    <div id="title" class="title text text-center-red">
-    </div>
-
-    <div id="description" class="description text">
-    </div>
-
-    <div id="conditions" class="conditions text">
-    </div>
-
-    <div id="description2" class="description2 text">
-    </div>
-
-    <div id="behavioral-features" class="behavioral-features text">
-    </div>
-
-    <div id="div-phonenumber" class="div-phonenumber">
-        <div id="phonenumber" class="phonenumber text-center-red">
-            <div id="first-phonenumber"></div>
-            <div id="second-phonenumber"></div>
+        <div id="title" class="title text text-center-red">
         </div>
-    </div>
 
-    <div id="fee" class="fee text text-center-red"></div>
+        <div id="description" class="description text">
+        </div>
 
-    <div id="footer" class="footer text">
-        Пожалуйста, сфотографируйте это объявление, чтобы не потерять номер телефона.
+        <div id="conditions" class="conditions text">
+        </div>
+
+        <div id="description2" class="description2 text">
+        </div>
+
+        <div id="behavioral-features" class="behavioral-features text">
+        </div>
+
+        <div id="div-phonenumber" class="div-phonenumber">
+            <div id="phonenumber" class="phonenumber text-center-red">
+                <div id="first-phonenumber"></div>
+                <div id="second-phonenumber"></div>
+            </div>
+        </div>
+
+        <div id="fee" class="fee text text-center-red"></div>
+
+        <div id="footer" class="footer text">
+            Пожалуйста, сфотографируйте это объявление, чтобы не потерять номер телефона.
+        </div>
     </div>
 </div>
 

@@ -1,5 +1,4 @@
-const btnPrew = document.getElementById('preview_btn'),
-    preview = document.getElementById('preview'),
+const preview = document.getElementById('preview'),
     previewBig = document.getElementById('previewBig'),
     photo = document.getElementById('photo'),
     title = document.getElementById('title'),
@@ -35,7 +34,6 @@ function previewFile() {
 }
 
 function createPreview() {
-
     previewFile();
 
     while (preview.firstChild) {
@@ -140,22 +138,5 @@ firstInputPhonenumber.addEventListener('input', delayProcess);
 secondInputPhonenumber.addEventListener('input', delayProcess);
 checkbox.addEventListener('change', delayProcess);
 sumFee.addEventListener('input', delayProcess);
-
-
-function shareVk() {
-    //$('#previewBig').show(0);
-
-    //domtoimage.toPng(previewBig)
-        //.then(function (dataUrl) {
-            //$('#previewBig').hide();
-
-        document.write(VK.Share.button({
-            url: 'http://propalasobaka.press',
-            title: 'Заголовок страницы',
-            image: 'https://img1.goodfon.ru/wallpaper/big/a/69/kartinka-3d-dikaya-koshka.jpg',
-            noparse: true
-        }, {type: 'custom', text: '<img src="./img/vk.png">'}));
-        //});
-};
 
 document.addEventListener('DOMContentLoaded', createPreview);
