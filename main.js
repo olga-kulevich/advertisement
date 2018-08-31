@@ -1,3 +1,5 @@
+import States from './states.js';
+
 const preview = document.getElementById('preview'),
     previewBig = document.getElementById('previewBig'),
     photo = document.getElementById('photo'),
@@ -18,7 +20,92 @@ const preview = document.getElementById('preview'),
     secondInputPhonenumber = document.getElementById('second-input-phonenumber'),
     checkbox = document.getElementById('inlineCheckbox1'),
     fee = document.getElementById('fee'),
-    sumFee = document.getElementById('sum-fee');
+    sumFee = document.getElementById('sum-fee'),
+    btnUndo = document.getElementById('undo'),
+    btnSavePdf = document.getElementById('save-pdf');
+
+const states = new States({
+    animal: selectAnimal.value,
+    character: areaMainChar.value,
+    conditions: areaConditions.value,
+    description: areaDescriptAnimal.value,
+    behavfeatures: areaBehavioralFeatures.value,
+    firstphone: firstInputPhonenumber.value,
+    secondphone: secondInputPhonenumber.value,
+    fee: sumFee.value
+});
+
+btnUndo.addEventListener('click', function() {
+    states.undo();
+    pringState();
+});
+
+function pringState() {
+    selectAnimal.value = states.get('animal');
+    areaMainChar.value = states.get('character');
+    areaConditions.value = states.get('conditions');
+    areaBehavioralFeatures.value = states.get('behavfeatures');
+    firstInputPhonenumber.value = states.get('firstphone');
+    secondInputPhonenumber.value = states.get('secondphone');
+    sumFee.value = states.get('fee');
+}
+
+function pushAnimal() {
+    states.push({
+        animal: selectAnimal.value
+    });
+}
+
+function pushCharacter() {
+    states.push({
+        character: areaMainChar.value
+    });
+}
+
+function pushConditions() {
+    states.push({
+        conditions: areaConditions.value
+    });
+}
+
+function pushBehavFeatures() {
+    states.push({
+        behavfeatures: areaBehavioralFeatures.value
+    });
+}
+
+function pushFirstPhone() {
+    states.push({
+        firstphone: firstInputPhonenumber.value
+    });
+}
+
+function pushSecondPhone() {
+    states.push({
+        secondphone: secondInputPhonenumber.value
+    });
+}
+
+function pushFee() {
+    states.push({
+        fee: sumFee.value
+    });
+}
+
+selectAnimal.addEventListener('input', debounce(pushAnimal, 300));
+
+areaMainChar.addEventListener('input', debounce(pushCharacter, 300));
+
+areaConditions.addEventListener('input', debounce(pushConditions, 300));
+
+areaBehavioralFeatures.addEventListener('input', debounce(pushBehavFeatures, 300));
+
+firstInputPhonenumber.addEventListener('input', debounce(pushFirstPhone, 300));
+
+secondInputPhonenumber.addEventListener('input', debounce(pushSecondPhone, 300));
+
+sumFee.addEventListener('input', debounce(pushFee, 300));
+
 
 function previewFile() {
     var petImage = document.getElementById('pet-image');
