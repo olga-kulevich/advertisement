@@ -1,4 +1,4 @@
-import States from './states.js';
+//import States from './states.js';
 
 const preview = document.getElementById('preview'),
     previewBig = document.getElementById('previewBig'),
@@ -24,7 +24,7 @@ const preview = document.getElementById('preview'),
     btnUndo = document.getElementById('undo'),
     btnSavePdf = document.getElementById('save-pdf');
 
-const states = new States({
+/*const states = new States({
     animal: selectAnimal.value,
     character: areaMainChar.value,
     conditions: areaConditions.value,
@@ -105,7 +105,7 @@ firstInputPhonenumber.addEventListener('input', debounce(pushFirstPhone, 300));
 secondInputPhonenumber.addEventListener('input', debounce(pushSecondPhone, 300));
 
 sumFee.addEventListener('input', debounce(pushFee, 300));
-
+*/
 
 function previewFile() {
     var petImage = document.getElementById('pet-image');

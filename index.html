@@ -59,30 +59,30 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label for="animal" class="control-label">&nbsp;</label>
-                        <input type="text" id="animal" placeholder="собака, кот, черепаха" class="form-control">
+                        <label for="animal" class="control-label white">&nbsp;</label>
+                        <input type="text" id="animal" placeholder="собака, кот, черепаха" class="form-control" maxlength="6">
                     </div>
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="control-label" for="area-main-characteristics">основные характеристики:</label>
-                <textarea class="form-control" id="area-main-characteristics" placeholder="порода, возраст, пол"></textarea>
+                <textarea class="form-control" id="area-main-characteristics" placeholder="порода, возраст, пол" maxlength="30"></textarea>
             </div>
 
             <div class="form-group">
                 <label class="control-label" for="area-conditions">обстоятельства пропажи:</label>
-                <textarea class="form-control" id="area-conditions" placeholder="дата, время суток, место"></textarea>
+                <textarea class="form-control" id="area-conditions" placeholder="дата, время суток, место" maxlength="30"></textarea>
             </div>
 
             <div class="form-group">
                 <label class="control-label" for="area-description-animal">описание животного:</label>
-                <textarea class="form-control" id="area-description-animal" placeholder="опишите размер, цвет, был ли ошейник, адресник, поводок, особенности внешности, отличительные черты"></textarea>
+                <textarea class="form-control" id="area-description-animal" placeholder="опишите размер, цвет, был ли ошейник, адресник, поводок, особенности внешности, отличительные черты" maxlength="60"></textarea>
             </div>
 
             <div class="form-group">
                 <label class="control-label" for="area-behavioral-features">особенности поведения:</label>
-                <textarea class="form-control" id="area-behavioral-features" placeholder="укажите, как себя ведет собака с людьми, откликается ли на имя, может ли проявить агрессию, убежать от испуга, стоит ли ее ловить или лучше не подходить и позвонить хозяину"></textarea>
+                <textarea class="form-control" id="area-behavioral-features" placeholder="укажите, как себя ведет собака с людьми, откликается ли на имя, может ли проявить агрессию, убежать от испуга, стоит ли ее ловить или лучше не подходить и позвонить хозяину" maxlength="60"></textarea>
             </div>
 
             <div class="form-group">
@@ -103,10 +103,8 @@
             </div>
 
             <div class="form-group">
-                <input required class="form-control" id="sum-fee" placeholder="при желании укажите сумму вознаграждения" type="text" maxlength="15">
+                <input required class="form-control" id="sum-fee" placeholder="при желании укажите сумму вознаграждения" type="text" maxlength="6">
             </div>
-
-            <a style="background-color: yellow" class="btn" href="javascript:getScreenshot()" id="save-advertisement">Скачать объявление</a>
 
             <a class="btn" href="" id="undo">Вернуть</a>
         </div>
@@ -117,18 +115,16 @@
                 <div class="col-lg-12"><label class="control-label">предпросмотр:</label></div>
                 <div class="col-lg-12 form-group" id="preview"></div>
                 <div class="col-lg-12 form-group">
-                    <div class="col-lg-12" id="social" style="padding: 20px 50px; text-align:center;background-color: #e1e1e1;">
+                    <div class="col-lg-12" id="social" style="padding: 40px 50px; text-align:center;background-color: #e1e1e1;">
                         <span>распечатайте объявление на цветном принтере, поделитесь объявлением в соцсетях:</span>
                     </div>
-                    <div class="col-lg-12 form-group" style="padding-bottom: 20px; background-color: #e1e1e1;">
-                        <div class="col-lg-6">
+                    <div class="col-lg-12 form-group"  style="background-color: #e1e1e1;">
+                        <div class="col-lg-6" style="padding-bottom: 20px;">
                             <a class="btn" href="javascript:getPdf()" id="save-pdf">скачать версию для печати</a>
                         </div>
 
-                        <div class="col-lg-6 social">
-                            <a href="#"><img src="./img/fb.png"></a>
-                            <a class="" href="#"><img src="./img/inst.png"></a>
-                            <a class="" href="#"><img src="./img/vk.png"></a>
+                        <div class="col-lg-6"  style="padding-bottom: 40px">
+                            <a class="btn pull-right" href="javascript:getScreenshot()" id="save-advertisement">скачать как изображение</a>
                         </div>
                     </div>
                 </div>
@@ -140,7 +136,7 @@
 <div id="container-main"class="content container container-main" style="display: block">
     <div class="row">
         <div class="col-lg-6" id="content">
-            <p class="text-lg-left"> что делать, если вы потеряли собаку:</p>
+            <p class="text-lg-left underline-text"> что делать, если вы потеряли собаку:</p>
             <p class="text-lg-left"> 1. убедитесь, что собака не прибежала к месту, где вы живете, зовите ее, обойдите ближайшие районы, опросите гуляющих собачников.</p>
             <p class="text-lg-left"> 2. позвоните друзьям, семье, попросите помочь в поисках. Сообщите куратору или заводчику собаки о произошедшем.</p>
             <p class="text-lg-left"> 3. Создайте и распечатайте объявления, по возможности распечатайте на цветном принтере, чтобы оно было заметным.</p>
@@ -151,7 +147,7 @@
         </div>
 
         <div class="col-lg-6">
-            <p class="text-lg-left"> что делать, когда собаку нашли:</p>
+            <p class="text-lg-left underline-text"> что делать, когда собаку нашли:</p>
             <p class="text-lg-left"> 1. купите ей адресник (если его не было) и никогда больше не снимайте. Он должен быть на любимом звере 24/7.</p>
             <p class="text-lg-left"> 2. снимите объявления, расскажите в учреждениях, где оставляли листовки, что собака нашлась.</p>
             <p class="text-lg-left"> 3. отметьте в интернете, что собака дома, или удалите объявления о поиске, чтобы не вводить людей в заблуждение.</p>
@@ -162,9 +158,19 @@
 
 <div id="container-about" class="content container container-about" style="display: none">
     <div class="row">
-        <div class="col-lg-6" id="content">здесь будет Женин текст</div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10" id="content">
+            <p class="text-lg-left underline-text"> что делать, если вы потеряли собаку:</p>
+            <p class="text-lg-left"> 1. убедитесь, что собака не прибежала к месту, где вы живете, зовите ее, обойдите ближайшие районы, опросите гуляющих собачников.</p>
+            <p class="text-lg-left"> 2. позвоните друзьям, семье, попросите помочь в поисках. Сообщите куратору или заводчику собаки о произошедшем.</p>
+            <p class="text-lg-left"> 3. Создайте и распечатайте объявления, по возможности распечатайте на цветном принтере, чтобы оно было заметным.</p>
+            <p class="text-lg-left"> 4. если вы живете в городе, где выпадают осадки - расклеивайте объявления в файлах, прорезью вниз.</p>
+            <p class="text-lg-left"> 5. печатайте несколько объявлений на одном листе, чтобы раздавать небольшие листовки людям (собачникам, администратору в ветклинике, продавцу в магазине, дворнику, охраннику поликлинники и т.д.)</p>
+            <p class="text-lg-left"> 6. попросите тех, кто не может помочь на месте, разместить объявления на сайтах и в группах по поиску животных. Используйте любые группы местности, где утеряно животное, например группу "Подслушано в Бутово", если собака потерялась в этом районе. Используйте породные группы, если собака породистая.</p>
+            <p class="text-lg-left"> 7. не думайте, что собака не может далеко убежать, потому что она боится, старая или маленькая. Может, не переставайте охватывать все большие территории.</p>
+        </div>
 
-        <div class="col-lg-6">здесь будет Женин текст</div>
+        <div class="col-lg-1"></div>
     </div>
 </div>
 
@@ -219,6 +225,6 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdn.rawgit.com/eligrey/FileSaver.js/5ed507ef8aa53d8ecfea96d96bc7214cd2476fd2/FileSaver.min.js"></script>
-<script type="module" src="./main.js"></script>
+<script type="text/javascript" src="./main.js"></script>
 </body>
 </html>
