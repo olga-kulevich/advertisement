@@ -1,4 +1,4 @@
-//import States from './states.js';
+import States from './states.js';
 
 const preview = document.getElementById('preview'),
     previewBig = document.getElementById('previewBig'),
@@ -22,9 +22,10 @@ const preview = document.getElementById('preview'),
     fee = document.getElementById('fee'),
     sumFee = document.getElementById('sum-fee'),
     btnUndo = document.getElementById('undo'),
-    btnSavePdf = document.getElementById('save-pdf');
+    btnSavePdf = document.getElementById('save-pdf'),
+    btnSaveAdvert = document.getElementById('save-advertisement');
 
-/*const states = new States({
+const states = new States({
     animal: selectAnimal.value,
     character: areaMainChar.value,
     conditions: areaConditions.value,
@@ -35,15 +36,21 @@ const preview = document.getElementById('preview'),
     fee: sumFee.value
 });
 
+btnSavePdf.addEventListener('click', getPdf);
+photo.addEventListener('change', previewFile);
+btnSaveAdvert.addEventListener('click', getScreenshot);
+
 btnUndo.addEventListener('click', function() {
     states.undo();
     pringState();
+    createPreview();
 });
 
 function pringState() {
     selectAnimal.value = states.get('animal');
     areaMainChar.value = states.get('character');
     areaConditions.value = states.get('conditions');
+    areaDescriptAnimal.value = states.get('description');
     areaBehavioralFeatures.value = states.get('behavfeatures');
     firstInputPhonenumber.value = states.get('firstphone');
     secondInputPhonenumber.value = states.get('secondphone');
@@ -65,6 +72,12 @@ function pushCharacter() {
 function pushConditions() {
     states.push({
         conditions: areaConditions.value
+    });
+}
+
+function pushDescriptAnimal() {
+    states.push({
+        description: areaConditions.value
     });
 }
 
@@ -98,6 +111,8 @@ areaMainChar.addEventListener('input', debounce(pushCharacter, 300));
 
 areaConditions.addEventListener('input', debounce(pushConditions, 300));
 
+areaDescriptAnimal.addEventListener('input', debounce(pushDescriptAnimal, 300));
+
 areaBehavioralFeatures.addEventListener('input', debounce(pushBehavFeatures, 300));
 
 firstInputPhonenumber.addEventListener('input', debounce(pushFirstPhone, 300));
@@ -105,7 +120,6 @@ firstInputPhonenumber.addEventListener('input', debounce(pushFirstPhone, 300));
 secondInputPhonenumber.addEventListener('input', debounce(pushSecondPhone, 300));
 
 sumFee.addEventListener('input', debounce(pushFee, 300));
-*/
 
 function previewFile() {
     var petImage = document.getElementById('pet-image');
@@ -154,7 +168,7 @@ function createPreview() {
         });
 }
 
-function getScreenshot() {
+export function getScreenshot() {
     $('#previewBig').show(0);
 
     domtoimage.toBlob(previewBig)
@@ -212,7 +226,7 @@ function debounce(payloadFunction, delayMs) {
     };
 };
 
-const delayProcess = debounce(createPreview, 1000);
+const delayProcess = debounce(createPreview, 100);
 
 photo.addEventListener('change', delayProcess);
 selectTitle.addEventListener('change', delayProcess);
