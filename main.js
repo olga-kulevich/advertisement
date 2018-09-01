@@ -1,5 +1,6 @@
 import States from './states.js';
 import initMenu from './menu.js';
+import putLoadedImageOnPreview from './preview.js';
 
 initMenu();
 
@@ -119,19 +120,6 @@ areaBehavioralFeatures.addEventListener('input', debounce(pushBehavFeatures, 300
 firstInputPhonenumber.addEventListener('input', debounce(pushFirstPhone, 300));
 secondInputPhonenumber.addEventListener('input', debounce(pushSecondPhone, 300));
 sumFee.addEventListener('input', debounce(pushFee, 300));
-
-function putLoadedImageOnPreview() {
-    var petImage = document.getElementById('pet-image');
-    var file = document.getElementById('photo').files[0];
-    var reader = new FileReader();
-
-    if (file && document.getElementById('photo').files.length !== 0) {
-        reader.onloadend = function() {
-            petImage.src = reader.result;
-        };
-        reader.readAsDataURL(file);
-    }
-}
 
 function createPreview() {
     putLoadedImageOnPreview();
