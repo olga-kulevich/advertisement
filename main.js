@@ -1,4 +1,7 @@
 import States from './states.js';
+import initMenu from './menu.js';
+
+initMenu();
 
 const preview = document.getElementById('preview'),
     previewBig = document.getElementById('previewBig'),
@@ -37,7 +40,9 @@ const states = new States({
 });
 
 btnSavePdf.addEventListener('click', getPdf);
+
 photo.addEventListener('change', previewFile);
+
 btnSaveAdvert.addEventListener('click', getScreenshot);
 
 btnUndo.addEventListener('click', function() {
@@ -107,19 +112,12 @@ function pushFee() {
 }
 
 selectAnimal.addEventListener('input', debounce(pushAnimal, 300));
-
 areaMainChar.addEventListener('input', debounce(pushCharacter, 300));
-
 areaConditions.addEventListener('input', debounce(pushConditions, 300));
-
 areaDescriptAnimal.addEventListener('input', debounce(pushDescriptAnimal, 300));
-
 areaBehavioralFeatures.addEventListener('input', debounce(pushBehavFeatures, 300));
-
 firstInputPhonenumber.addEventListener('input', debounce(pushFirstPhone, 300));
-
 secondInputPhonenumber.addEventListener('input', debounce(pushSecondPhone, 300));
-
 sumFee.addEventListener('input', debounce(pushFee, 300));
 
 function previewFile() {
@@ -195,24 +193,6 @@ function getPdf() {
             pdf.save('ad.pdf');
         });
 };
-
-const listItems = document.querySelectorAll('#list-menu li a');
-const listContainers = document.querySelectorAll('.content');
-
-for (var i = 0; i < listItems.length; i++) {
-    var listItem = listItems[i];
-    listItem.addEventListener('click', function () {
-        for (var j = 0; j < listItems.length; j++) {
-            var item = listItems[j];
-            var container = listContainers[j];
-            item.classList.remove('active');
-            container.style.display = 'none';
-        }
-        event.currentTarget.classList.add('active');
-        var containerId = event.currentTarget.id;
-        document.getElementById('container-' + containerId).style.display = "block";
-    });
-}
 
 function debounceCreatePreview() {
     refreshingPreview();
