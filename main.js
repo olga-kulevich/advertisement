@@ -48,12 +48,12 @@ btnSaveAdvert.addEventListener('click', getScreenshot);
 
 btnUndo.addEventListener('click', function() {
     states.undo();
-    pringState();
+    reverseState();
     createPreview();
     refreshingPreview();
 });
 
-function pringState() {
+function reverseState() {
     selectAnimal.value = states.get('animal');
     areaMainChar.value = states.get('character');
     areaConditions.value = states.get('conditions');
