@@ -41,7 +41,7 @@ const states = new States({
 
 btnSavePdf.addEventListener('click', getPdf);
 
-photo.addEventListener('change', previewFile);
+photo.addEventListener('change', putLoadedImageOnPreview);
 
 btnSaveAdvert.addEventListener('click', getScreenshot);
 
@@ -120,7 +120,7 @@ firstInputPhonenumber.addEventListener('input', debounce(pushFirstPhone, 300));
 secondInputPhonenumber.addEventListener('input', debounce(pushSecondPhone, 300));
 sumFee.addEventListener('input', debounce(pushFee, 300));
 
-function previewFile() {
+function putLoadedImageOnPreview() {
     var petImage = document.getElementById('pet-image');
     var file = document.getElementById('photo').files[0];
     var reader = new FileReader();
@@ -134,7 +134,7 @@ function previewFile() {
 }
 
 function createPreview() {
-    previewFile();
+    putLoadedImageOnPreview();
 
     title.innerHTML = selectTitle.options[selectTitle.selectedIndex].value.toUpperCase() + ' ' + selectAnimal.value.toUpperCase();
     description.innerHTML = areaMainChar.value;
