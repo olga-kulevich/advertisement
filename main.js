@@ -44,6 +44,7 @@ btnUndo.addEventListener('click', function() {
     states.undo();
     pringState();
     createPreview();
+    refreshingPreview();
 });
 
 function pringState() {
@@ -137,10 +138,6 @@ function previewFile() {
 function createPreview() {
     previewFile();
 
-    while (preview.firstChild) {
-        preview.removeChild(preview.firstChild);
-    }
-
     title.innerHTML = selectTitle.options[selectTitle.selectedIndex].value.toUpperCase() + ' ' + selectAnimal.value.toUpperCase();
     description.innerHTML = areaMainChar.value;
     conditions.innerHTML = areaConditions.value;
@@ -159,12 +156,17 @@ function createPreview() {
 
     domtoimage.toSvg(previewBig)
         .then(function (dataUrl) {
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
             $('#previewBig').hide();
             var img = new Image();
             img.src = dataUrl;
             img.classList.add("img-fluid", "img-responsive");
 
             preview.appendChild(img);
+            preview.style.opacity = 1;
         });
 }
 
@@ -212,6 +214,11 @@ for (var i = 0; i < listItems.length; i++) {
     });
 }
 
+function debounceCreatePreview() {
+    refreshingPreview();
+    delayProcess();
+}
+
 function debounce(payloadFunction, delayMs) {
     var timerId;
 
@@ -226,18 +233,28 @@ function debounce(payloadFunction, delayMs) {
     };
 };
 
-const delayProcess = debounce(createPreview, 100);
+function refreshingPreview() {
+    if (preview.style.opacity == 1) {
+        const loadingIndicator = document.createElement("span");
+        loadingIndicator.classList.add("glyphicon", "glyphicon-refresh", "spin", "loading-indicator");
+        preview.appendChild(loadingIndicator);
+    }
 
-photo.addEventListener('change', delayProcess);
-selectTitle.addEventListener('change', delayProcess);
-selectAnimal.addEventListener('input', delayProcess);
-areaMainChar.addEventListener('input', delayProcess);
-areaConditions.addEventListener('input', delayProcess);
-areaDescriptAnimal.addEventListener('input', delayProcess);
-areaBehavioralFeatures.addEventListener('input', delayProcess);
-firstInputPhonenumber.addEventListener('input', delayProcess);
-secondInputPhonenumber.addEventListener('input', delayProcess);
-checkbox.addEventListener('change', delayProcess);
-sumFee.addEventListener('input', delayProcess);
+    preview.style.opacity = 0.5;
+}
+
+const delayProcess = debounce(createPreview, 500);
+
+photo.addEventListener('change', debounceCreatePreview);
+selectTitle.addEventListener('change', debounceCreatePreview);
+selectAnimal.addEventListener('input', debounceCreatePreview);
+areaMainChar.addEventListener('input', debounceCreatePreview);
+areaConditions.addEventListener('input', debounceCreatePreview);
+areaDescriptAnimal.addEventListener('input', debounceCreatePreview);
+areaBehavioralFeatures.addEventListener('input', debounceCreatePreview);
+firstInputPhonenumber.addEventListener('input', debounceCreatePreview);
+secondInputPhonenumber.addEventListener('input', debounceCreatePreview);
+checkbox.addEventListener('change', debounceCreatePreview);
+sumFee.addEventListener('input', debounceCreatePreview);
 
 document.addEventListener('DOMContentLoaded', createPreview);
