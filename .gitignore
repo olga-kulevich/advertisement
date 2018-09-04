@@ -3,8 +3,3 @@ node_modules/
 
 # IDE's settings
 .idea
-
-# Owner files for help
-exemple.html
-exemple.js
-sample.pdf

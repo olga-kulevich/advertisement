@@ -1,22 +1,19 @@
 import States from './states.js';
 import initMenu from './menu.js';
-import {putLoadedImageOnPreview, createPreview} from './preview.js';
+import debounce from './debounce.js';
+import getScreenshot from './screenshot.js';
+import getPdf from './pdf.js';
+import {putLoadedImageOnPreview, createPreview, refreshingPreview} from './preview.js';
 
-initMenu();
-
-const preview = document.getElementById('preview'),
-    previewBig = document.getElementById('previewBig'),
-    photo = document.getElementById('photo'),
-    selectTitle = document.getElementById('select-title'),
+const photo = document.getElementById('photo'),
     selectAnimal = document.getElementById('animal'),
-    areaMainChar = document.getElementById('area-main-characteristics'),
     conditions = document.getElementById('conditions'),
+    areaMainChar = document.getElementById('area-main-characteristics'),
     areaConditions = document.getElementById('area-conditions'),
     areaDescriptAnimal = document.getElementById('area-description-animal'),
     areaBehavioralFeatures = document.getElementById('area-behavioral-features'),
     firstInputPhonenumber = document.getElementById('first-input-phonenumber'),
     secondInputPhonenumber = document.getElementById('second-input-phonenumber'),
-    checkbox = document.getElementById('inlineCheckbox1'),
     fee = document.getElementById('fee'),
     sumFee = document.getElementById('sum-fee'),
     btnUndo = document.getElementById('undo'),
@@ -33,6 +30,8 @@ const states = new States({
     secondphone: secondInputPhonenumber.value,
     fee: sumFee.value
 });
+
+initMenu();
 
 btnSavePdf.addEventListener('click', getPdf);
 
@@ -114,74 +113,5 @@ areaBehavioralFeatures.addEventListener('input', debounce(pushBehavFeatures, 300
 firstInputPhonenumber.addEventListener('input', debounce(pushFirstPhone, 300));
 secondInputPhonenumber.addEventListener('input', debounce(pushSecondPhone, 300));
 sumFee.addEventListener('input', debounce(pushFee, 300));
-
-export function getScreenshot() {
-    $('#previewBig').show(0);
-
-    domtoimage.toBlob(previewBig)
-        .then(function (blob) {
-            $('#previewBig').hide();
-            window.saveAs(blob, 'ad.png');
-        });
-}
-
-function getPdf() {
-    $('#previewBig').show(0);
-
-    domtoimage.toJpeg(previewBig)
-        .then(function (dataUrl) {
-            $('#previewBig').hide();
-            var pdf = new jsPDF('p', 'mm', 'a4');
-            pdf.addImage(dataUrl, 'jpeg', 5, 7.5, 199.5, 282.15);
-            pdf.setFontType("normal");
-            pdf.setFontSize(10);
-            pdf.text(85, 295, '@propalasobaka.press');
-
-            pdf.save('ad.pdf');
-        });
-};
-
-function debounceCreatePreview() {
-    refreshingPreview();
-    delayProcess();
-}
-
-function debounce(payloadFunction, delayMs) {
-    var timerId;
-
-    return function () {
-        var params = arguments;
-
-        clearTimeout(timerId);
-
-        timerId = setTimeout(function () {
-            payloadFunction.apply(null, params);
-        }, delayMs);
-    };
-};
-
-function refreshingPreview() {
-    if (preview.style.opacity == 1) {
-        const loadingIndicator = document.createElement("span");
-        loadingIndicator.classList.add("glyphicon", "glyphicon-refresh", "spin", "loading-indicator");
-        preview.appendChild(loadingIndicator);
-    }
-
-    preview.style.opacity = 0.5;
-}
-
-const delayProcess = debounce(createPreview, 500);
-
-photo.addEventListener('change', debounceCreatePreview);
-selectTitle.addEventListener('change', debounceCreatePreview);
-selectAnimal.addEventListener('input', debounceCreatePreview);
-areaMainChar.addEventListener('input', debounceCreatePreview);
-areaConditions.addEventListener('input', debounceCreatePreview);
-areaDescriptAnimal.addEventListener('input', debounceCreatePreview);
-areaBehavioralFeatures.addEventListener('input', debounceCreatePreview);
-firstInputPhonenumber.addEventListener('input', debounceCreatePreview);
-secondInputPhonenumber.addEventListener('input', debounceCreatePreview);
-checkbox.addEventListener('change', debounceCreatePreview);
-sumFee.addEventListener('input', debounceCreatePreview);
 
 document.addEventListener('DOMContentLoaded', createPreview);
