@@ -1,18 +1,21 @@
-export function counterr() {
-    var arr = ['area-main-characteristics','area-conditions','area-description-animal','area-behavioral-features'];
+export function setCounter() {
+    var arr = [
+        'area-main-characteristics',
+        'area-conditions',
+        'area-description-animal',
+        'area-behavioral-features',
+    ];
 
     arr.forEach(function(item) {
         let element = document.getElementById(item);
-        element.addEventListener('input', counter);
-    })
+        element.addEventListener('input', (event) => updateCounter(event.currentTarget));
+        updateCounter(element);
+    });
 }
 
-export function counter(event) {
+function updateCounter(target) {
+    var maxLength = target.getAttribute('maxlength'),
+        currentLength = target.value.length;
 
-    var element = event.currentTarget,
-        maxlength = element.getAttribute('maxlength'),
-        currentLength = element.value.length;
-
-    element.nextElementSibling.innerHTML = currentLength + '/' + maxlength;
+    target.nextElementSibling.innerHTML = currentLength + '/' + maxLength;
 }
-
