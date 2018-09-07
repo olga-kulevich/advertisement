@@ -174,9 +174,13 @@ label.form-check-label {
 }
 
 .btn {
-    border: 2px solid red;
-    background-color: #e1e1e1;
+    background-color: #f299f2;
     border-radius: 0px;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
 }
 
 .navbar-brand {
@@ -213,13 +217,13 @@ menu.navbar-brand>img {
 .navbar .navbar-right > .active > a:hover,
 .navbar .navbar-right > .active > a:focus {
     color: #000;
-    background: #51fff1;
+    background: #f299f2;
 }
 
 .navbar .navbar-right > li > a:hover,
 .navbar .navbar-right > li > a:focus,
 .navbar .navbar-right > li > a.active {
-    background: #51fff1;
+    background: #f299f2;
 }
 
 .spin{

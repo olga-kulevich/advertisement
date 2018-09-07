@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PropalaSobaka</title>
     <!-- Latest compiled and minified CSS -->
@@ -11,6 +12,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="style.css" media="all">
+
+    <script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
 </head>
 <body>
 
@@ -67,22 +70,26 @@
 
             <div class="form-group">
                 <label class="control-label" for="area-main-characteristics">основные характеристики:</label>
-                <textarea class="form-control" id="area-main-characteristics" placeholder="порода, возраст, пол" maxlength="30"></textarea>
+                <textarea class="form-control" id="area-main-characteristics" placeholder="порода, возраст, пол" maxlength="35"></textarea>
+                <span style="color: #f299f2" class="pull-right"></span>
             </div>
 
             <div class="form-group">
                 <label class="control-label" for="area-conditions">обстоятельства пропажи:</label>
                 <textarea class="form-control" id="area-conditions" placeholder="дата, время суток, место" maxlength="30"></textarea>
+                <span style="color: #f299f2" class="pull-right"></span>
             </div>
 
             <div class="form-group">
                 <label class="control-label" for="area-description-animal">описание животного:</label>
                 <textarea class="form-control" id="area-description-animal" placeholder="опишите размер, цвет, был ли ошейник, адресник, поводок, особенности внешности, отличительные черты" maxlength="60"></textarea>
+                <span style="color: #f299f2" class="pull-right"></span>
             </div>
 
             <div class="form-group">
                 <label class="control-label" for="area-behavioral-features">особенности поведения:</label>
                 <textarea class="form-control" id="area-behavioral-features" placeholder="укажите, как себя ведет собака с людьми, откликается ли на имя, может ли проявить агрессию, убежать от испуга, стоит ли ее ловить или лучше не подходить и позвонить хозяину" maxlength="60"></textarea>
+                <span style="color: #f299f2" class="pull-right"></span>
             </div>
 
             <div class="form-group">
@@ -121,7 +128,7 @@
                         </div>
 
                         <div class="col-lg-6"  style="padding-bottom: 40px">
-                            <a class="btn pull-right" id="save-advertisement">скачать как изображение</a>
+                            <a class="btn pull-right" id="save-advertisement">скачать изображение</a>
                         </div>
                     </div>
                 </div>

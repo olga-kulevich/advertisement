@@ -5,7 +5,7 @@ export default function initMenu() {
 
     for (var i = 0; i < listItems.length; i++) {
         var listItem = listItems[i];
-        listItem.addEventListener('click', function () {
+        listItem.addEventListener('click', function (event) {
             for (var j = 0; j < listItems.length; j++) {
                 var item = listItems[j];
                 var container = listContainers[j];
