@@ -143,7 +143,7 @@ button[disabled] {
 .nav>li>a {
     color: black;
     font-size: 16px;
-    margin: 0px 80px;
+    margin: 0px 20px;
 }
 
 .text-muted {
@@ -209,20 +209,20 @@ menu.navbar-brand>img {
     margin-top: 70px;
 }
 
-.navbar .navbar-right > .active{
+.navbar .navbar-left > .active{
     color: #000;
 }
 
-.navbar .navbar-right > .active > a,
-.navbar .navbar-right > .active > a:hover,
-.navbar .navbar-right > .active > a:focus {
+.navbar .navbar-left > .active > a,
+.navbar .navbar-left > .active > a:hover,
+.navbar .navbar-left > .active > a:focus {
     color: #000;
     background: #f299f2;
 }
 
-.navbar .navbar-right > li > a:hover,
-.navbar .navbar-right > li > a:focus,
-.navbar .navbar-right > li > a.active {
+.navbar .navbar-left > li > a:hover,
+.navbar .navbar-left > li > a:focus,
+.navbar .navbar-left > li > a.active {
     background: #f299f2;
 }
 
