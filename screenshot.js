@@ -4,6 +4,6 @@ export default function getScreenshot() {
     domtoimage.toBlob(previewBig)
         .then(function (blob) {
             $('#previewBig').hide();
-            window.saveAs(blob, 'ad.png');
+            window.saveAs(blob, 'ad.jpeg');
         });
 }
