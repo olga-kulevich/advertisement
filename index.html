@@ -14,6 +14,13 @@
     <link type="text/css" rel="stylesheet" href="style.css" media="all">
 
     <script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_o4izapZdE0HWUY95dhbBC");
+        })();
+    </script>
 </head>
 <body>
 
@@ -237,7 +244,7 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn">отправить</button>
+                <button id="feedback-submit" type="submit" class="btn">отправить</button>
             </div>
         </div>
 
