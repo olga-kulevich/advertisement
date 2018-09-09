@@ -1,7 +1,7 @@
 import initMenu from './menu.js';
 import getScreenshot from './screenshot.js';
 import getPdf from './pdf.js';
-import {putLoadedImageOnPreview, createPreview} from './preview.js';
+import {putLoadedImageOnPreview, createPreview} from './preview.js?v=0.1';
 import {setCounter} from './count-symbols.js';
 
 const photo = document.getElementById('photo'),
