@@ -59,7 +59,7 @@ export function createPreview() {
             $('#previewBig').hide();
             var img = new Image();
             img.src = dataUrl;
-            img.classList.add("img-fluid", "img-responsive");
+            img.classList.add("img-responsive");
 
             preview.appendChild(img);
             preview.style.opacity = 1;
