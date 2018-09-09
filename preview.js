@@ -50,7 +50,7 @@ export function createPreview() {
 
     $('#previewBig').show(0);
 
-    domtoimage.toSvg(previewBig)
+    domtoimage.toJpeg(previewBig)
         .then(function (dataUrl) {
             while (preview.firstChild) {
                 preview.removeChild(preview.firstChild);
