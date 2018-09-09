@@ -27,6 +27,7 @@ export function putLoadedImageOnPreview() {
         reader.onloadend = function () {
             var backgroundUrl = reader.result;
             petImage.style.backgroundImage = "url('" + backgroundUrl + "')";
+            petImage.style.borderColor = "white";
         };
         reader.readAsDataURL(file);
     }
