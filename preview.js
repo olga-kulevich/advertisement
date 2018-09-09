@@ -25,7 +25,8 @@ export function putLoadedImageOnPreview() {
 
     if (file && document.getElementById('photo').files.length !== 0) {
         reader.onloadend = function () {
-            petImage.src = reader.result;
+            var backgroundUrl = reader.result;
+            petImage.style.backgroundImage = "url('" + backgroundUrl + "')";
         };
         reader.readAsDataURL(file);
     }

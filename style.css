@@ -53,17 +53,20 @@ button[disabled] {
     color: red;
 }
 
-.previewBig img {
+div.pet-image {
+    background-image: url("./img/bg-white.png");
     position: absolute;
-    width: 1650px;
-    height: 1100px;
+    width: 1520px;
+    height: 1140px;
     top: 100px;
-    right: 375px;
+    right: 450px;
+    background-position: center;
+    background-size: cover;
 }
 
 .title {
-    font-size: 150px;
-    top: 1200px;
+    font-size: 130px;
+    top: 1250px;
 }
 
 .description {
@@ -270,9 +273,7 @@ menu.navbar-brand>img {
     text-align: center;
 }
 
-.img-responsive {
-    width:100%;
-}
+
 
 @media screen and (min-width: 992px) {
     .text-in-head div div {
