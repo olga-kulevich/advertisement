@@ -270,6 +270,10 @@ menu.navbar-brand>img {
     text-align: center;
 }
 
+.img-responsive {
+    width:100%;
+}
+
 @media screen and (min-width: 992px) {
     .text-in-head div div {
         margin-top: -130px;
