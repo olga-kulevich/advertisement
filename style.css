@@ -1,11 +1,16 @@
 html body{
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #010101;
     position: relative;
     background-color: #ffffff;
     min-height: 100%;
 }
 
 .container-main p {
-    text-align: justify;
+    text-align: left;
 }
 
 .previewBig {
@@ -38,6 +43,7 @@ button[disabled] {
 
 .underline-text {
     text-decoration: underline;
+    text-decoration-skip-ink: none;
 }
 
 .previewBig .text {
@@ -160,8 +166,10 @@ textarea {
 
 .form-control {
     background-color: #e1e1e1;
+    color: #888888;
     border-radius: 0px;
     border: none;
+    font-size: 16px;
 }
 
 .white {
@@ -170,6 +178,8 @@ textarea {
 
 label {
     text-decoration: underline;
+    text-decoration-skip-ink: none;
+    font-weight: normal;
 }
 
 label.form-check-label {
@@ -177,10 +187,11 @@ label.form-check-label {
 }
 
 .btn {
-    color: black;
-    background-color: #f299f2;
+    color: #010101;
+    background-color: #f3b2f4;
     border-radius: 0px;
     width: 100%;
+    font-size: 16px;
 }
 
 a {
@@ -218,13 +229,17 @@ menu.navbar-brand>img {
 .navbar .navbar-left > .active > a:hover,
 .navbar .navbar-left > .active > a:focus {
     color: #000;
-    background: #f299f2;
+    background: #f3b2f4;
 }
 
 .navbar .navbar-left > li > a:hover,
 .navbar .navbar-left > li > a:focus,
 .navbar .navbar-left > li > a.active {
-    background: #f299f2;
+    background: #f3b2f4;
+}
+
+.count-symbols-color {
+    color: #f3b2f4;
 }
 
 .spin{
@@ -272,8 +287,6 @@ menu.navbar-brand>img {
     transform: translateY(-50%);
     text-align: center;
 }
-
-
 
 @media screen and (min-width: 992px) {
     .text-in-head div div {
