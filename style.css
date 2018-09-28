@@ -110,7 +110,7 @@ div.pet-image {
     right: 200px;
     font-weight: bold;
     overflow: hidden;
-    bottom: 450px;
+    bottom: 620px;
     left: 550px;
 }
 
@@ -122,8 +122,8 @@ div.pet-image {
 }
 
 .fee {
-    font-size: 150px;
-    bottom: 200px;
+    font-size: 120px;
+    bottom: 400px;
 }
 
 .social {
@@ -147,9 +147,16 @@ div.row.block-preview {
 
 .footer {
     position: absolute;
+    font-size: 55px;
+    text-align: center;
+    bottom: 220px;
+}
+
+.site {
+    position: absolute;
     font-size: 45px;
     text-align: center;
-    bottom: 100px;
+    bottom: 90px; 
 }
 
 .footerr {
@@ -168,12 +175,17 @@ div.row.block-preview {
 }
 
 .text-muted {
-    color: #000;
+    color: #010101;
+}
+
+input, select {
+    font-style: italic;
 }
 
 textarea {
     resize: none;
     overflow: auto;
+    font-style: italic;
 }
 
 .form-control {

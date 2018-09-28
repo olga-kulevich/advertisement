@@ -10,7 +10,6 @@ export default function getPdf() {
             pdf.addImage(dataUrl, 'jpeg', 5, 7.5, 199.5, 282.15);
             pdf.setFontType("normal");
             pdf.setFontSize(10);
-            pdf.text(85, 295, '@propalasobaka.press');
 
             pdf.save('ad.pdf');
         });
