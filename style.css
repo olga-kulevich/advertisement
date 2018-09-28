@@ -44,6 +44,7 @@ button[disabled] {
 .underline-text {
     text-decoration: underline;
     text-decoration-skip-ink: none;
+    -webkit-text-decoration-skip: none;
 }
 
 .previewBig .text {
@@ -161,7 +162,7 @@ div.row.block-preview {
 }
 
 .nav>li>a {
-    color: black;
+    color: #010101;
     font-size: 16px;
     margin: 0px 20px;
 }
@@ -190,6 +191,7 @@ textarea {
 label {
     text-decoration: underline;
     text-decoration-skip-ink: none;
+    -webkit-text-decoration-skip: none;
     font-weight: normal;
 }
 
@@ -232,13 +234,13 @@ menu.navbar-brand>img {
 }
 
 .navbar .navbar-left > .active{
-    color: #000;
+    color: #010101;
 }
 
 .navbar .navbar-left > .active > a,
 .navbar .navbar-left > .active > a:hover,
 .navbar .navbar-left > .active > a:focus {
-    color: #000;
+    color: #010101;
     background: #f3b2f4;
 }
 
