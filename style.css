@@ -1,5 +1,5 @@
 html body{
-    font-family: Verdana, sans-serif;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -133,6 +133,17 @@ div.pet-image {
     padding: 0px 17px;
 }
 
+div.col-lg-12.block-with-btn, 
+div.col-lg-6.block-preview {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+div.row.block-preview {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
 .footer {
     position: absolute;
     font-size: 45px;
@@ -190,12 +201,11 @@ label.form-check-label {
     color: #010101;
     background-color: #f3b2f4;
     border-radius: 0px;
-    width: 100%;
     font-size: 16px;
 }
 
 a {
-    color: #000000;
+    color: #010101;
     text-decoration: none;
 }
 
@@ -301,10 +311,22 @@ menu.navbar-brand>img {
     .text-in-head div div {
         margin: 30px 70px;
     }
+    .btn.btn-pdf {
+        margin-bottom: 15px;
+    }
+    .btn {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .text-in-head div div {
         margin: 30px 0;
+    }
+    .btn.btn-pdf {
+        margin-bottom: 15px;
+    }
+    .btn {
+        width: 100%;
     }
 }
