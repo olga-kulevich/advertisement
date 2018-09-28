@@ -68,7 +68,7 @@ export function createPreview() {
         });
 }
 
-const delayProcess = debounce(createPreview, 700);
+const delayProcess = debounce(createPreview, 1000);
 
 export function debounceCreatePreview() {
     refreshingPreview();
