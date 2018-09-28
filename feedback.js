@@ -10,6 +10,5 @@ export default function sendMail() {
         to_name: "Zhenya",
     }
 
-    //emailjs.send("gmail", "template_CsWbBSbg", payload);
-    console.log(payload);
+    emailjs.send("gmail", "template_CsWbBSbg", payload);
 }
