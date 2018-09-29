@@ -72,7 +72,7 @@ div.pet-image {
 }
 
 .title {
-    font-size: 130px;
+    font-size: 110px;
     top: 1250px;
 }
 
@@ -85,23 +85,24 @@ div.pet-image {
 
 .conditions {
     font-size: 75px;
-    text-align: justify;
+    text-align: left;
     height: 200px;
     top: 1550px;
 }
 
 .description2 {
     font-size: 75px;
-    text-align: justify;
+    text-align: left;
     height: 300px;
     bottom: 1350px;
 }
 
 .behavioral-features {
     font-size: 75px;
-    text-align: justify;
-    height: 300px;
+    text-align: left;
+    height: 310px;
     bottom: 1000px;
+    overflow: hidden;
 }
 
 .div-phonenumber {
@@ -110,7 +111,7 @@ div.pet-image {
     right: 200px;
     font-weight: bold;
     overflow: hidden;
-    bottom: 620px;
+    bottom: 530px;
     left: 550px;
 }
 
@@ -119,11 +120,13 @@ div.pet-image {
     height: 400px;
     font-size: 130px;
     border: 15px solid red;
+    overflow: hidden;
 }
 
 .fee {
     font-size: 120px;
-    bottom: 400px;
+    bottom: 350px;
+    overflow: hidden;
 }
 
 .social {
@@ -149,7 +152,7 @@ div.row.block-preview {
     position: absolute;
     font-size: 55px;
     text-align: center;
-    bottom: 220px;
+    bottom: 180px;
 }
 
 .site {
@@ -164,7 +167,7 @@ div.row.block-preview {
     width: 100%;
     font-size: 14px;
     text-align: center;
-    color: black;
+    color: #e1e1e1;
     margin: 40px 0px 20px 0px;
 }
 
