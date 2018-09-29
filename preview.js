@@ -45,9 +45,13 @@ export function createPreview() {
     secondPhonenumber.innerHTML = secondInputPhonenumber.value;
 
     if (checkbox.checked) {
-        fee.innerHTML = checkbox.value + ' ' + sumFee.value + '!';
+        if (sumFee.value.length > 0) {
+            fee.innerHTML = checkbox.value + ' ' + sumFee.value + '!';
+        } else { 
+            fee.innerHTML = checkbox.value + '!';
+        }   
     } else {
-        fee.innerHTML = "";
+        fee.innerHTML = '';
     }
 
     $('#previewBig').show(0);
