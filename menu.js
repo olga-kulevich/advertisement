@@ -22,4 +22,46 @@ export default function initMenu() {
             document.getElementById('header-' + headId).style.display = "block";
         });
     }
+    
+    function eventFire(el, etype) {
+        if (el.fireEvent) {
+            el.fireEvent('on' + etype);
+        } else {
+        var evObj = document.createEvent('Events');
+        evObj.initEvent(etype, true, false);
+        el.dispatchEvent(evObj);
+        }
+}
+    
+    const listLinksMain = document.querySelectorAll('.link-main');
+    for (var i = 0; i < listLinksMain.length; i++) {
+        var listLinkMain = listLinksMain[i];
+        listLinkMain.addEventListener('click', function () {
+           eventFire(document.getElementById('main'), 'click');
+        });
+    }
+    
+    const listLinksConstructor = document.querySelectorAll('.link-constructor');
+     for (var i = 0; i < listLinksConstructor.length; i++) {
+        var listLinkConstructor = listLinksConstructor[i];
+        listLinkConstructor.addEventListener('click', function () {
+           eventFire(document.getElementById('adv'), 'click');
+        });
+    }
+    
+    const listLinksFeedback = document.querySelectorAll('.link-contact-us');
+     for (var i = 0; i < listLinksFeedback.length; i++) {
+        var listLinkFeedback = listLinksFeedback[i];
+        listLinkFeedback.addEventListener('click', function () {
+           eventFire(document.getElementById('feedback'), 'click');
+        });
+    }
+    
+    const listLinksTeam = document.querySelectorAll('.link-team');
+     for (var i = 0; i < listLinksTeam.length; i++) {
+        var listLinkTeam = listLinksTeam[i];
+        listLinkTeam.addEventListener('click', function () {
+           eventFire(document.getElementById('team'), 'click');
+        });
+    }
 }
