@@ -2,7 +2,7 @@ html body{
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 14px;
     color: #010101;
     position: relative;
     background-color: #ffffff;
@@ -162,7 +162,7 @@ div.row.block-preview {
 .footerr {
     bottom: 0;
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
     color: black;
     margin: 40px 0px 20px 0px;
@@ -170,7 +170,7 @@ div.row.block-preview {
 
 .nav>li>a {
     color: #010101;
-    font-size: 16px;
+    font-size: 14px;
     margin: 0px 5px;
 }
 
@@ -193,7 +193,7 @@ textarea {
     color: #888888;
     border-radius: 0px;
     border: none;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .white {
@@ -215,7 +215,7 @@ label.form-check-label {
     color: #010101;
     background-color: #f3b2f4;
     border-radius: 0px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 a {
