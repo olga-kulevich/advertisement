@@ -85,21 +85,21 @@ div.pet-image {
 
 .conditions {
     font-size: 75px;
-    text-align: left;
+    text-align: center;
     height: 200px;
     top: 1550px;
 }
 
 .description2 {
     font-size: 75px;
-    text-align: left;
+    text-align: center;
     height: 300px;
     bottom: 1350px;
 }
 
 .behavioral-features {
     font-size: 75px;
-    text-align: left;
+    text-align: center;
     height: 310px;
     bottom: 1000px;
     overflow: hidden;
