@@ -263,10 +263,12 @@ menu.navbar-brand>img {
     padding: 5px 10px;
 }
 
-.navbar .navbar-left > li > a:hover,
-.navbar .navbar-left > li > a:focus,
-.navbar .navbar-left > li > a.active {
+html div .navbar .navbar-left > li > a:hover,
+html div .navbar .navbar-left > li > a.active {
     background: #f3b2f4;
+}
+html .navbar .navbar-left > li > a:focus {
+    background: transparent;
 }
 
 .count-symbols-color {
