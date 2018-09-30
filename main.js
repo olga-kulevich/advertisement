@@ -8,11 +8,41 @@ import sendMail from './feedback.js';
 const photo = document.getElementById('photo'),
     btnSavePdf = document.getElementById('save-pdf'),
     btnSaveAdvert = document.getElementById('save-advertisement'),
-    feedbackSubmit = document.getElementById('feedback-submit');
+    feedbackName = document.getElementById('feedback-name'),
+    feedbackMail = document.getElementById('feedback-mail'),
+    feedbackMessage = document.getElementById('feedback-message'),
+    feedbackSubmit = document.getElementById('feedback-submit'),
+    formFeedback = document.forms['feedback'];
+
+if (feedbackName.value.length == 0 || feedbackMail.value.length == 0 || feedbackMessage.value.length == 0) {
+    feedbackSubmit.disabled = true;
+} else {
+    feedbackSubmit.disabled = false;
+}
+
+formFeedback.addEventListener('keyup', function() {
+    if (feedbackName.readOnly == false &&
+        feedbackName.value.length > 0 && feedbackMail.value.length > 0 
+        && feedbackMessage.value.length > 0) {
+        feedbackSubmit.disabled = false;
+    }
+});
 
 feedbackSubmit.addEventListener('click', function() {
-    sendMail();
-    feedbackSubmit.disabled = true;
+    if (feedbackSubmit.disabled == false) {
+        sendMail();
+        
+        var elements = formFeedback.elements;
+        for (var i = 0, len = elements.length; i < len; ++i) {
+            elements[i].readOnly = true;
+        }
+        
+        feedbackSubmit.disabled = true;   
+    } 
+});
+
+formFeedback.addEventListener('submit', function(event) {
+        event.preventDefault ();
 });
 
 initMenu();

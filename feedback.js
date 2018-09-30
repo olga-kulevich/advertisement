@@ -11,4 +11,5 @@ export default function sendMail() {
     }
 
     emailjs.send("gmail", "template_CsWbBSbg", payload);
+    alert("Сообщение отправлено"); 
 }
