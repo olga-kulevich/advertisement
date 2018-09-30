@@ -22,7 +22,10 @@ export default function initMenu() {
             container.style.display = 'none';
             head.style.display = 'none';
         }
-        const id = window.location.hash.substr(1);
+        let id = window.location.hash.substr(1);
+        if (id == "") {
+            id = "home";
+        }
         document.getElementById("link-" + id).classList.add('active');
         document.getElementById('container-' + id).style.display = "block";
         document.getElementById('header-' + id).style.display = "block";
