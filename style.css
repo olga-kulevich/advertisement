@@ -18,7 +18,7 @@ html body{
     width: 2480px;
     height: 3508px;
     background-color: #ffffff;
-    border: 40px solid red;
+    border: 40px solid #ff6600;
 }
 
 .container-main {
@@ -57,7 +57,7 @@ button[disabled] {
 
 .previewBig .text-center-red {
     text-align: center;
-    color: red;
+    color: #ff6600;
 }
 
 div.pet-image {
@@ -119,7 +119,7 @@ div.pet-image {
     width: 1300px;
     height: 400px;
     font-size: 130px;
-    border: 15px solid red;
+    border: 15px solid #ff6600;
     overflow: hidden;
 }
 
