@@ -11,6 +11,6 @@ export default function getPdf() {
             pdf.setFontType("normal");
             pdf.setFontSize(10);
 
-            pdf.save('ad.pdf');
+            pdf.save('propalasobaka.pdf');
         });
 };
