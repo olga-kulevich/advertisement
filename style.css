@@ -216,7 +216,7 @@ label.form-check-label {
 
 .btn {
     color: #010101;
-    background-color: #f3b2f4;
+    background-color: #ff646a;
     border-radius: 0px;
     font-size: 14px;
 }
@@ -256,7 +256,7 @@ menu.navbar-brand>img {
 .navbar .navbar-left > .active > a:hover,
 .navbar .navbar-left > .active > a:focus {
     color: #010101;
-    background: #f3b2f4;
+    background: #ff646a;
 }
 
 .navbar-nav>li>a {
@@ -265,14 +265,14 @@ menu.navbar-brand>img {
 
 html div .navbar .navbar-left > li > a:hover,
 html div .navbar .navbar-left > li > a.active {
-    background: #f3b2f4;
+    background: #ff646a;
 }
 html .navbar .navbar-left > li > a:focus {
     background: transparent;
 }
 
 .count-symbols-color {
-    color: #f3b2f4;
+    color: #ff646a;
 }
 
 .spin{
