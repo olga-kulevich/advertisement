@@ -135,9 +135,9 @@
                             <option value="пропала">пропала</option>
                             <option value="пропал">пропал</option>
                             <option value="пропали">пропали</option>
-                            <option value="пропали">найдена</option>
-                            <option value="пропали">найден</option>
-                            <option value="пропали">найдены</option>
+                            <option value="найдена">найдена</option>
+                            <option value="найден">найден</option>
+                            <option value="найдены">найдены</option>
                         </select>
                     </div>
                 </div>
@@ -366,6 +366,13 @@
             d.addEventListener("DOMContentLoaded", f, false);
         } else { f(); }
     })(document, window, "yandex_metrika_callbacks2");
+
+document.getElementById('save-pdf').addEventListener('click', () => {
+    yaCounter50241349.reachGoal('button-print');
+});
+document.getElementById('save-advertisement').addEventListener('click', () => {
+    yaCounter50241349.reachGoal('button-picture');
+});
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/50241349" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
