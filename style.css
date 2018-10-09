@@ -69,11 +69,11 @@ div.date {
     top: 560px;
     left: -500px;
     height: 100px;
-    -webkit-transform: rotate(-90deg); //Chrome, Safari
-    -moz-transform: rotate(-90deg); //Firefox
-    -o-transform: rotate(-90deg); //Opera
-    -ms-transform: rotate(-90deg); //IE
-    transform: rotate(-90deg); //браузеры без префексов
+    -webkit-transform: rotate(-90deg); /*Chrome, Safari*/
+    -moz-transform: rotate(-90deg); /*Firefox*/
+    -o-transform: rotate(-90deg); /*Opera*/
+    -ms-transform: rotate(-90deg); /*IE*/
+    transform: rotate(-90deg); /*браузеры без префексов*/
 }
 
 div.pet-image {
