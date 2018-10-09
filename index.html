@@ -127,6 +127,14 @@
                 <input type="file" accept="image/jpeg,image/png,image/*" id="photo" class="form-control-file">
             </div>
 
+            <div class="form-check form-group">
+                <label style="display: block;" class="control-label">Дата создания объявления:</label>
+                <input style="height: 25px; width: 25px" class="checkbox-inline" type="checkbox" id="inlineCheckboxDate" value="Объявление создано">
+                <label style="width:370px; padding-left: 0px; font-style: italic; color: #888888" class="form-check-label checkbox-inline" for="inlineCheckboxDate">
+                    дата показывает актуальность объявления и увеличивает шансы при поиске
+                </label>
+            </div>
+
             <div class="row">
                 <div style="padding-left: 15px;" class="col-lg-6">
                     <div class="form-group">
@@ -157,7 +165,7 @@
 
             <div class="form-group">
                 <label class="control-label" for="area-conditions">Обстоятельства пропажи:</label>
-                <textarea class="form-control" id="area-conditions" placeholder="дата, время суток, место" maxlength="80"></textarea>
+                <textarea class="form-control" id="area-conditions" placeholder="дата, время суток, место" maxlength="40"></textarea>
                 <span class="pull-right count-symbols-color"></span>
             </div>
 
@@ -288,6 +296,8 @@
     <div id="previewBig" class ="previewBig">
         <div id="pet-image" class="pet-image"></div>
 
+        <div id="date" class="date"></div>
+
         <div id="title" class="title text text-center-red">
         </div>
 
@@ -313,7 +323,7 @@
         <div id="fee" class="fee text text-center-red"></div>
 
         <div id="footer" class="footer text">
-            Пожалуйста, сфотографируйте это объявление, чтобы не потерять номер телефона.
+            Пожалуйста, сфотографируйте это объявление,<br> чтобы не потерять номер телефона
         </div>
         
         <div id="site" class="site text">

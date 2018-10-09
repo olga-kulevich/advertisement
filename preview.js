@@ -16,7 +16,9 @@ const preview = document.getElementById('preview'),
     behavioralFeatures = document.getElementById('behavioral-features'),
     firstPhonenumber = document.getElementById('first-phonenumber'),
     secondPhonenumber = document.getElementById('second-phonenumber'),
-    checkbox = document.getElementById('inlineCheckbox1');
+    checkbox = document.getElementById('inlineCheckbox1'),
+    checkboxDate = document.getElementById('inlineCheckboxDate'),
+    date = document.getElementById('date');
 
 export function putLoadedImageOnPreview() {
     var petImage = document.getElementById('pet-image');
@@ -36,7 +38,7 @@ export function putLoadedImageOnPreview() {
 export function createPreview() {
     putLoadedImageOnPreview();
 
-    title.innerHTML = selectTitle.options[selectTitle.selectedIndex].value.toUpperCase() + ' ' + selectAnimal.value.toUpperCase();
+    title.innerHTML = selectTitle.options[selectTitle.selectedIndex].value.toUpperCase() + '<br>' + selectAnimal.value.toUpperCase();
     description.innerHTML = areaMainChar.value;
     conditions.innerHTML = areaConditions.value;
     description2.innerHTML = areaDescriptAnimal.value;
@@ -44,11 +46,20 @@ export function createPreview() {
     firstPhonenumber.innerHTML = firstInputPhonenumber.value;
     secondPhonenumber.innerHTML = secondInputPhonenumber.value;
 
+    var d = new Date();
+    var strDate = d.getDate() + "." + (d.getMonth()+1) + "." + d.getFullYear();
+
+    if (checkboxDate.checked) {
+        date.innerHTML = checkboxDate.value.toUpperCase() + ' ' + strDate;
+    } else {
+        date.innerHTML = '';
+    }
+
     if (checkbox.checked) {
         if (sumFee.value.length > 0) {
-            fee.innerHTML = checkbox.value + ' ' + sumFee.value + '!';
+            fee.innerHTML = checkbox.value.toUpperCase() + ' ' + sumFee.value.toUpperCase() + '!';
         } else { 
-            fee.innerHTML = checkbox.value + '!';
+            fee.innerHTML = checkbox.value.toUpperCase() + '!';
         }   
     } else {
         fee.innerHTML = '';
@@ -89,6 +100,7 @@ areaBehavioralFeatures.addEventListener('input', debounceCreatePreview);
 firstInputPhonenumber.addEventListener('input', debounceCreatePreview);
 secondInputPhonenumber.addEventListener('input', debounceCreatePreview);
 checkbox.addEventListener('change', debounceCreatePreview);
+checkboxDate.addEventListener('change', debounceCreatePreview);
 sumFee.addEventListener('input', debounceCreatePreview);
 
 export function refreshingPreview() {
