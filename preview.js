@@ -40,9 +40,9 @@ export function createPreview() {
 
     title.innerHTML = selectTitle.options[selectTitle.selectedIndex].value.toUpperCase() + '<br>' + selectAnimal.value.toUpperCase();
     description.innerHTML = areaMainChar.value;
-    conditions.innerHTML = areaConditions.value;
-    description2.innerHTML = areaDescriptAnimal.value;
-    behavioralFeatures.innerHTML = areaBehavioralFeatures.value;
+    conditions.innerHTML = areaConditions.value.replace(/\n/g,'<br/>');
+    description2.innerHTML = areaDescriptAnimal.value.replace(/\n/g,'<br/>');
+    behavioralFeatures.innerHTML = areaBehavioralFeatures.value.replace(/\n/g,'<br/>');
     firstPhonenumber.innerHTML = firstInputPhonenumber.value;
     secondPhonenumber.innerHTML = secondInputPhonenumber.value;
 
