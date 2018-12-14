@@ -18,7 +18,7 @@ html body{
     width: 2480px;
     height: 3508px;
     background-color: #ffffff;
-    border: 40px solid #ff6600;
+    border: 40px solid #fc131b;
 }
 
 .container-main {
@@ -57,12 +57,12 @@ button[disabled]:hover {
 
 .previewBig .text-center-red {
     text-align: center;
-    color: #ff6600;
+    color: #fc131b;
 }
 
 div.date {
     position: absolute;
-    color: #ff6600;
+    color: #fc131b;
     font-size: 56px;
     font-weight: bold;
     margin: 10px;
@@ -137,7 +137,7 @@ div.pet-image {
     width: 1300px;
     height: 400px;
     font-size: 120px;
-    border: 15px solid #ff6600;
+    border: 15px solid #fc131b;
     overflow: hidden;
 }
 
