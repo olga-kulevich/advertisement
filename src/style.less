@@ -1,3 +1,5 @@
+@constructor-color-highlight: #fc131b;
+
 html body{
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -18,7 +20,7 @@ html body{
     width: 2480px;
     height: 3508px;
     background-color: #ffffff;
-    border: 40px solid #fc131b;
+    border: 40px solid @constructor-color-highlight;
 }
 
 .container-main {
@@ -57,12 +59,12 @@ button[disabled]:hover {
 
 .previewBig .text-center-red {
     text-align: center;
-    color: #fc131b;
+    color: @constructor-color-highlight;
 }
 
 div.date {
     position: absolute;
-    color: #fc131b;
+    color: @constructor-color-highlight;
     font-size: 56px;
     font-weight: bold;
     margin: 10px;
@@ -137,7 +139,7 @@ div.pet-image {
     width: 1300px;
     height: 400px;
     font-size: 120px;
-    border: 15px solid #fc131b;
+    border: 15px solid @constructor-color-highlight;
     overflow: hidden;
 }
 

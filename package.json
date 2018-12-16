@@ -7,7 +7,9 @@
   "author": "Olga Kulevich",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.24.4"
+    "browser-sync": "^2.24.4",
+    "gulp": "^4.0.0",
+    "gulp-less": "^4.0.1"
   },
   "dependencies": {
     "canvg": "^1.5.2",

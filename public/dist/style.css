@@ -1,0 +1,353 @@
+html body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #010101;
+  position: relative;
+  background-color: #ffffff;
+  min-height: 100%;
+}
+.container-main p {
+  text-align: left;
+}
+.previewBig {
+  position: relative;
+  width: 2480px;
+  height: 3508px;
+  background-color: #ffffff;
+  border: 40px solid #fc1310;
+}
+.container-main {
+  position: relative;
+  height: 100%;
+}
+.container-ad {
+  position: relative;
+  height: 100%;
+}
+.container-about {
+  position: relative;
+  height: 100%;
+}
+button[disabled]:hover {
+  cursor: none;
+  pointer-events: none;
+}
+.underline-text {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip: none;
+}
+.previewBig .text {
+  position: absolute;
+  width: 2000px;
+  right: 200px;
+  font-weight: bold;
+  overflow: hidden;
+}
+.previewBig .text-center-red {
+  text-align: center;
+  color: #fc1310;
+}
+div.date {
+  position: absolute;
+  color: #fc1310;
+  font-size: 56px;
+  font-weight: bold;
+  margin: 10px;
+  top: 560px;
+  left: -500px;
+  height: 100px;
+  -webkit-transform: rotate(-90deg);
+  /*Chrome, Safari*/
+  -moz-transform: rotate(-90deg);
+  /*Firefox*/
+  -o-transform: rotate(-90deg);
+  /*Opera*/
+  -ms-transform: rotate(-90deg);
+  /*IE*/
+  transform: rotate(-90deg);
+  /*браузеры без префексов*/
+}
+div.pet-image {
+  border: 2px solid black;
+  position: absolute;
+  width: 1520px;
+  height: 1140px;
+  top: 60px;
+  right: 450px;
+  background-position: center;
+  background-size: cover;
+}
+.title {
+  line-height: 110%;
+  font-weight: bold;
+  font-size: 190px;
+  top: 1230px;
+}
+.description {
+  font-size: 75px;
+  text-align: center;
+  height: 100px;
+  bottom: 1685px;
+}
+.conditions {
+  font-size: 75px;
+  text-align: left;
+  height: 200px;
+  bottom: 1460px;
+}
+.description2 {
+  font-size: 75px;
+  text-align: left;
+  height: 310px;
+  bottom: 1120px;
+}
+.behavioral-features {
+  font-size: 75px;
+  text-align: left;
+  height: 200px;
+  bottom: 895px;
+  overflow: hidden;
+}
+.div-phonenumber {
+  position: absolute;
+  width: 1300px;
+  right: 200px;
+  font-weight: bold;
+  overflow: hidden;
+  bottom: 445px;
+  left: 550px;
+}
+.phonenumber {
+  width: 1300px;
+  height: 400px;
+  font-size: 120px;
+  border: 15px solid #fc1310;
+  overflow: hidden;
+}
+.fee {
+  font-size: 90px;
+  bottom: 290px;
+  overflow: hidden;
+}
+.footer {
+  position: absolute;
+  font-size: 55px;
+  text-align: center;
+  bottom: 135px;
+}
+.site {
+  position: absolute;
+  font-size: 45px;
+  text-align: center;
+  bottom: 60px;
+}
+.social {
+  display: inline-block;
+}
+.social img {
+  height: 36px;
+  padding: 0px 17px;
+}
+div.col-lg-12.block-with-btn,
+div.col-lg-6.block-preview {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+div.row.block-preview {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.footerr {
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  color: #e1e1e1;
+  margin: 40px 0px 20px 0px;
+}
+.nav > li > a {
+  color: #010101;
+  font-size: 14px;
+  margin: 0px 5px;
+}
+.text-muted {
+  color: #010101;
+}
+input,
+select {
+  font-style: italic;
+}
+textarea {
+  resize: none;
+  overflow: auto;
+  font-style: italic;
+}
+.form-control {
+  background-color: #e1e1e1;
+  color: #888888;
+  border-radius: 0px;
+  border: none;
+  font-size: 14px;
+}
+.white {
+  color: white;
+}
+label {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip: none;
+  font-weight: normal;
+}
+label.form-check-label {
+  text-decoration: none;
+}
+.btn {
+  color: #010101;
+  background-color: #df73ff;
+  border-radius: 0px;
+  font-size: 14px;
+}
+a {
+  color: #010101;
+  text-decoration: none;
+}
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand > img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+}
+menu.navbar-brand > img {
+  padding: 7px 15px;
+}
+.glyphicon {
+  font-size: 50px;
+}
+.glyphicon.glyphicon-question-sign {
+  font-size: 14px;
+  color: #888888;
+}
+.navbar-brand {
+  height: 250px;
+  line-height: 100px;
+}
+.navbar .navbar-left > .active {
+  color: #010101;
+}
+.navbar .navbar-left > .active > a,
+.navbar .navbar-left > .active > a:hover,
+.navbar .navbar-left > .active > a:focus {
+  color: #010101;
+  background: #df73ff;
+}
+.navbar-nav > li > a {
+  padding: 5px 10px;
+}
+html div .navbar .navbar-left > li > a:hover,
+html div .navbar .navbar-left > li > a.active {
+  background: #df73ff;
+}
+html .navbar .navbar-left > li > a:focus {
+  background: transparent;
+}
+.count-symbols-color {
+  color: #df73ff;
+}
+.spin {
+  -webkit-transform-origin: 50% 58%;
+  transform-origin: 50% 58%;
+  -ms-transform-origin: 50% 58%;
+  /* IE 9 */
+  -webkit-animation: spin 0.2s infinite linear;
+  -moz-animation: spin 0.2s infinite linear;
+  -o-animation: spin 0.2s infinite linear;
+  animation: spin 0.2s infinite linear;
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loading-indicator {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .instagram {
+    height: 300px;
+  }
+  .text-in-head div div {
+    margin-top: -130px;
+  }
+  .navbar-nav {
+    margin-top: 70px;
+  }
+  .btn.btn-pdf {
+    width: 270px;
+  }
+  .btn.btn-picture {
+    width: 220px;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .instagram {
+    height: 160px;
+  }
+  .text-in-head div div {
+    margin: 30px 70px;
+  }
+  .btn.btn-pdf {
+    width: 100%;
+  }
+  .btn.btn-picture {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .instagram {
+    height: 160px;
+  }
+  .text-in-head div div {
+    margin: 30px 0;
+  }
+  .btn.btn-pdf {
+    width: 100%;
+  }
+  .btn.btn-picture {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
+}
