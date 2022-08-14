@@ -4,6 +4,6 @@ export default function getScreenshot() {
     domtoimage.toBlob(previewBig)
         .then(function (blob) {
             $('#previewBig').hide();
-            window.saveAs(blob, 'propalasobaka.jpeg');
+            window.saveAs(blob, 'propalasobaka.png');
         });
 }
