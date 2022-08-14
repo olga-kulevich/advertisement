@@ -38,7 +38,7 @@ export function putLoadedImageOnPreview() {
 export function createPreview() {
     putLoadedImageOnPreview();
 
-    title.innerHTML = selectTitle.options[selectTitle.selectedIndex].value.toUpperCase() + '<br>' + selectAnimal.value.toUpperCase();
+    title.innerHTML = selectTitle.options[selectTitle.selectedIndex].value + '<br>' + selectAnimal.value;
     description.innerHTML = areaMainChar.value;
     conditions.innerHTML = areaConditions.value.replace(/\n/g,'<br/>');
     description2.innerHTML = areaDescriptAnimal.value.replace(/\n/g,'<br/>');
@@ -50,17 +50,17 @@ export function createPreview() {
     var strDate = d.getDate() + "." + (d.getMonth()+1) + "." + d.getFullYear();
 
     if (checkboxDate.checked) {
-        date.innerHTML = checkboxDate.value.toUpperCase() + ' ' + strDate;
+        date.innerHTML = checkboxDate.value + ' ' + strDate;
     } else {
         date.innerHTML = '';
     }
 
     if (checkbox.checked) {
         if (sumFee.value.length > 0) {
-            fee.innerHTML = checkbox.value.toUpperCase() + ' ' + sumFee.value.toUpperCase() + '!';
-        } else { 
-            fee.innerHTML = checkbox.value.toUpperCase() + '!';
-        }   
+            fee.innerHTML = checkbox.value + ' ' + sumFee.value + '!';
+        } else {
+            fee.innerHTML = checkbox.value + '!';
+        }
     } else {
         fee.innerHTML = '';
     }
