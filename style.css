@@ -67,8 +67,9 @@ div.date {
     font-weight: bold;
     margin: 10px;
     top: 560px;
-    left: -500px;
+    left: -700px;
     height: 100px;
+    width: 1500px;
     -webkit-transform: rotate(-90deg); /*Chrome, Safari*/
     -moz-transform: rotate(-90deg); /*Firefox*/
     -o-transform: rotate(-90deg); /*Opera*/
