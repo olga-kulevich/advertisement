@@ -24,7 +24,7 @@ export default function initMenu() {
         }
         let id = window.location.hash.substr(1);
         if (id == "") {
-            id = "home";
+            id = "constructor";
         }
         document.getElementById("link-" + id).classList.add('active');
         document.getElementById('container-' + id).style.display = "block";
